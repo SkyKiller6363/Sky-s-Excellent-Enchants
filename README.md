@@ -69,7 +69,6 @@ Sky's Excellent Enchantments/
 │   ├── utilities/
 │   └── weapons/
 ├── Enchant_List.md
-├── Enchant_List.csv
 ├── packinfo.yml
 └── README.md
 ```
@@ -80,7 +79,6 @@ Sky's Excellent Enchantments/
 |---|---|
 | `packinfo.yml` | MythicMobs pack metadata, including name, description, author, version, and icon. |
 | `Enchant_List.md` | Human-readable enchantment table grouped by type. Includes descriptions, max levels, equipment tags, incompatibilities, and weights. |
-| `Enchant_List.csv` | Spreadsheet-friendly version of the enchantment list. |
 | `datapack/mythicenchants/tags/item/see_enchant_tags.yml` | Custom item tag support used by Mythic Enchants. |
 | `enchantments/` | Mythic Enchants configuration files. |
 | `skills/` | MythicMobs skill files used by the enchantments. |

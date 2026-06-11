@@ -1,0 +1,48 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see:aerial_grace:
+  Display: Aerial Grace
+  Description: Softens falls and lets you glide after taking damage
+  Rarity: UNCOMMON
+  MinLevel: 1
+  MaxLevel: 3
+  ValidSlots:
+  - FEET
+  SupportedItems: '#minecraft:enchantable/foot_armor'
+  AnvilCost: 4
+  Options:
+    Enabled: true
+    Treasure: false
+    RandomLoot: true
+    Tradeable: true
+    TradedEquipment: true
+    MobSpawnEquipment: true
+  Enchanting:
+    Weight: 5
+    MinCost:
+      Base: 16
+      PerLevel: 4
+    Promised: true
+    BookOffer: true
+  Skills:
+  - potion{type=SLOW_FALLING;l=0;duration=<math.enchant_level*30+40>;p=false;i=false;cd=3} @self ~onDamaged ?chance{c=<math.enchant_level*0.1>}
+  - particle{particle=cloud;a=6;hs=0.4;vs=0.2} @selflocation ~onTimer:12 ?!onGround ?haspotioneffect{t=SLOW_FALLING}

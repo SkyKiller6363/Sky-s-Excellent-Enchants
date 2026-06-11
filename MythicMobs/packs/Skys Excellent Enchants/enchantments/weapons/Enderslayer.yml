@@ -1,0 +1,55 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see:enderslayer:
+  Display: Enderslayer
+  Description: Increased damage to Enderman, Ender Dragons, and Shulkers
+  Rarity: RARE
+  MinLevel: 1
+  MaxLevel: 5
+  ValidSlots:
+  - HAND
+  SupportedItems: '#minecraft:enchantable/weapon'
+  ConflictingEnchants:
+  - minecraft:sharpness
+  - minecraft:smite
+  - see:bane_of_netherspawn
+  - see:villager_defense
+  AnvilCost: 5
+  Options:
+    Enabled: true
+    Treasure: false
+    RandomLoot: true
+    Tradeable: true
+    TradedEquipment: true
+    MobSpawnEquipment: true
+  Enchanting:
+    Weight: 3
+    MinCost:
+      Base: 20
+      PerLevel: 5
+    Promised: true
+    BookOffer: true
+    PrimaryItems:
+    - '#minecraft:enchantable/melee_weapon'
+  Skills:
+  - damage{a=<math:enchant_level*2.5>} @trigger ~onAttack ?~entitytype{types=ENDERMAN,ENDER_DRAGON,SHULKER}
+  - particle{particle=enchanted_hit;amount=10;hs=0.5;vs=0.6} @triggerlocation{y=1} ~onAttack ?~entitytype{types=ENDERMAN,ENDER_DRAGON,SHULKER}

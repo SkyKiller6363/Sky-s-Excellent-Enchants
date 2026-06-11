@@ -1,0 +1,53 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see:featherweight:
+  Display: Featherweight
+  Description: Makes your boots lighter, improving jump strength, movement speed, and safe falling
+  Rarity: RARE
+  MinLevel: 1
+  MaxLevel: 3
+  ValidSlots:
+  - FEET
+  SupportedItems: '#minecraft:enchantable/foot_armor'
+  AnvilCost: 5
+  Options:
+    Enabled: true
+    Treasure: false
+    RandomLoot: true
+    Tradeable: true
+    TradedEquipment: true
+    MobSpawnEquipment: true
+  Enchanting:
+    Weight: 4
+    MinCost:
+      Base: 18
+      PerLevel: 5
+    Promised: true
+    BookOffer: true
+  Attributes:
+    Feet:
+    - MOVEMENT_SPEED <math.enchant_level*0.01> ADD
+    - JUMP_STRENGTH <math.enchant_level*0.04> ADD
+    - SAFE_FALL_DISTANCE <math.enchant_level*2> ADD
+  Skills:
+  - particle{particle=cloud;a=4;hs=0.25;vs=0.05} @selflocation ~onTimer:10 ?moving
+  - particle{particle=falling_dust;a=3;material=WHITE_WOOL;hs=0.2;vs=0.1} @selflocation ~onTimer:6 ?!onGround

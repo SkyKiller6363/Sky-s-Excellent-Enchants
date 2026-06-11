@@ -1,0 +1,48 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see:tunnel:
+  Display: Tunnel
+  Description: Allows you to mine multiple blocks
+  Rarity: RARE
+  MinLevel: 1
+  MaxLevel: 3
+  ValidSlots:
+  - HAND
+  SupportedItems: '#minecraft:pickaxes'
+  AnvilCost: 5
+  Options:
+    Enabled: true
+    Treasure: false
+    RandomLoot: true
+    Tradeable: true
+    TradedEquipment: true
+    MobSpawnEquipment: true
+  Enchanting:
+    Weight: 4
+    MinCost:
+      Base: 20
+      PerLevel: 4
+    Promised: true
+    BookOffer: true
+  Skills:
+  - skill:see_tunnel{sync=true} @self ~onBlockBreak ?!crouching
+  - reducedurability{a=1} @self ~onBlockBreak ?!crouching

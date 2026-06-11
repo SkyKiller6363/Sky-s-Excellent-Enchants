@@ -1,0 +1,53 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see:glass_cannon:
+  Display: Glass Cannon
+  Description: Greatly increases attack damage while reducing max health when held
+  Rarity: VERY_RARE
+  MinLevel: 1
+  MaxLevel: 3
+  ValidSlots:
+  - HAND
+  SupportedItems: '#minecraft:enchantable/weapon'
+  AnvilCost: 8
+  Options:
+    Enabled: true
+    Treasure: false
+    RandomLoot: true
+    Tradeable: true
+    TradedEquipment: true
+    MobSpawnEquipment: false
+  Enchanting:
+    Weight: 2
+    MinCost:
+      Base: 30
+      PerLevel: 8
+    Promised: true
+    BookOffer: true
+    PrimaryItems:
+    - '#minecraft:enchantable/melee_weapon'
+  Attributes:
+    MainHand:
+    - ATTACK_DAMAGE <math.enchant_level*1.25> ADD
+    - MAX_HEALTH -<math.enchant_level*2> ADD
+  Skills:
+  - skill{s=see_glass_cannon} @trigger ~onAttack

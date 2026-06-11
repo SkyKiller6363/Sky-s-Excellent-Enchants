@@ -1,0 +1,65 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see:ender_bow:
+  Display: Ender Bow
+  Description: Shoots an Enderpearl
+  Rarity: ULTRA_RARE
+  MinLevel: 1
+  MaxLevel: 1
+  ValidSlots:
+  - HAND
+  SupportedItems: '#minecraft:enchantable/bow'
+  ConflictingEnchants:
+  - minecraft:infinity
+  - minecraft:power
+  - minecraft:punch
+  - minecraft:flame
+  - see:bomber
+  - see:dragonfire_arrows
+  - see:ghast
+  - see:confusing_arrows
+  - see:darkness_arrows
+  - see:electrified_arrows
+  - see:explosive_arrows
+  - see:hover
+  - see:poisoned_arrows
+  - see:sniper
+  - see:vampiric_arrows
+  - see:withered_arrows
+  AnvilCost: 10
+  Options:
+    Enabled: true
+    Treasure: true
+    RandomLoot: true
+    Tradeable: true
+    TradedEquipment: true
+    MobSpawnEquipment: true
+  Skills:
+  - skill{s=see_ender_bow;sync=true} @self ~onShoot
+  - skill{s=see_ender_bow_land;sync=true} @self ~onProjectileHit
+  Enchanting:
+    Weight: 1
+    MinCost:
+      Base: 25
+      PerLevel: 5
+    Promised: true
+    BookOffer: true

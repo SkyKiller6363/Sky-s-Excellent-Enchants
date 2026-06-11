@@ -1,0 +1,52 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see:iron_will:
+  Display: Iron Will
+  Description: Increases knockback resistance and max health while wearing chest armor
+  Rarity: RARE
+  MinLevel: 1
+  MaxLevel: 3
+  ValidSlots:
+  - CHEST
+  SupportedItems: '#minecraft:enchantable/chest_armor'
+  AnvilCost: 6
+  Options:
+    Enabled: true
+    Treasure: false
+    RandomLoot: true
+    Tradeable: true
+    TradedEquipment: true
+    MobSpawnEquipment: true
+  Enchanting:
+    Weight: 3
+    MinCost:
+      Base: 24
+      PerLevel: 5
+    Promised: true
+    BookOffer: true
+  Attributes:
+    Chest:
+    - KNOCKBACK_RESISTANCE <math.enchant_level*0.10> ADD
+    - MAX_HEALTH <math.enchant_level*2> ADD
+  Skills:
+  - particle{particle=crit;a=8;hs=0.35;vs=0.5} @selflocation{y=1} ~onDamaged
+  - sound{s=item.shield.block;p=1.2;v=0.5} @self ~onDamaged

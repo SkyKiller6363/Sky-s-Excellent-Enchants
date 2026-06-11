@@ -1,0 +1,52 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see:speed:
+  Display: Speed
+  Description: Increases Speed
+  Rarity: UNCOMMON
+  MinLevel: 1
+  MaxLevel: 3
+  ValidSlots:
+  - FEET
+  SupportedItems: '#minecraft:enchantable/foot_armor'
+  AnvilCost: 5
+  Options:
+    Enabled: true
+    Treasure: false
+    RandomLoot: true
+    Tradeable: true
+    TradedEquipment: true
+    MobSpawnEquipment: true
+  Enchanting:
+    Weight: 4
+    MinCost:
+      Base: 20
+      PerLevel: 4
+    Promised: true
+    BookOffer: true
+  Attributes:
+    Feet:
+    - MOVEMENT_SPEED <math.enchant_level*0.02> ADD
+  Skills:
+  - particle{particle=cloud;a=2;hs=0.5;vs=0} @selflocation ~onTimer:9 ?moving ?onGround
+  - particle{particle=fireworks_spark;a=3;hs=0.3;vs=0} @selflocation ~onTimer:6 ?moving
+    ?onGround

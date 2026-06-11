@@ -1,0 +1,53 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see:curse_of_lead:
+  Display: Curse Of Lead
+  Description: A curse that makes your boots heavy but harder to knock around
+  Rarity: CURSE
+  MinLevel: 1
+  MaxLevel: 2
+  ValidSlots:
+  - FEET
+  SupportedItems: '#minecraft:enchantable/foot_armor'
+  AnvilCost: 8
+  Options:
+    Enabled: true
+    Cursed: true
+    Treasure: true
+    RandomLoot: true
+    Tradeable: true
+    TradedEquipment: true
+    MobSpawnEquipment: true
+  Enchanting:
+    Weight: 1
+    MinCost:
+      Base: 28
+      PerLevel: 8
+    Promised: false
+    BookOffer: true
+  Attributes:
+    Feet:
+    - MOVEMENT_SPEED -<math.enchant_level*0.025> ADD
+    - STEP_HEIGHT -<math.enchant_level*0.25> ADD
+    - KNOCKBACK_RESISTANCE <math.enchant_level*0.20> ADD
+  Skills:
+  - particle{particle=ash;a=5;hs=0.25;vs=0.05} @selflocation ~onTimer:12 ?moving

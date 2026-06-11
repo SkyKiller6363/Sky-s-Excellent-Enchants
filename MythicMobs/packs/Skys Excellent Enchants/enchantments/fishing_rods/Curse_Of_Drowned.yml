@@ -1,0 +1,51 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see:curse_of_drowned:
+  Display: 'Curse Of Drowned'
+  Description: 'Has a chance to fish up a Drowned'
+  Rarity: UNCOMMON
+  MinLevel: 1
+  MaxLevel: 3
+  ValidSlots:
+    - HAND
+  SupportedItems: 'minecraft:fishing_rod'
+  AnvilCost: 5
+  Options:
+    Enabled: true
+    Cursed: true
+    Treasure: false
+    RandomLoot: true
+    Tradeable: true
+    TradedEquipment: true
+    MobSpawnEquipment: true
+  Enchanting: 
+    Weight: 4
+    MinCost:
+      Base: 20
+      PerLevel: 4
+    Promised: true
+    BookOffer: true
+  Skills:
+  - summon{type=curse_of_drowned;a=<math.enchant_level>;radius=4;sio=false;sip=false;if=false;
+    onSummon=[
+      - settarget @NearestPlayer
+      ]} @self ~onFishFail ?chance{c=<math.enchant_level/3>}

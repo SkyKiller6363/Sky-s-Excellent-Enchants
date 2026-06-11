@@ -1,0 +1,618 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                    Sky's Decapitator Enchantment                   ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)           │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A Decapitator Enchantment! When you kill a mob,     ██
+#   ██   there's a chance its head will drop! This is for every mob       ██
+#   ██   in the game! How Fun!                                            ██
+#   ██                                                                    ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see_decapitator_allay:
+  Id: player_head
+  Display: '<yellow>Allay Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTFjNTlkY2NkZTRiODUzNTUwMGRjZjY3OTRjYTQ1MDY2M2Y2MDcyOTBlMjUxMGY2ZDhlYjFlNWViNzFkYTVhZiJ9fX0=
+
+see_decapitator_armadillo:
+  Id: player_head
+  Display: '<yellow>Armadillo Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTg1MmIzM2JhMjk0ZjU2MDA5MDc1MmQxMTNmZTcyOGNiYzdkZDA0MjAyOWEzOGQ1MzgyZDY1YTIxNDYwNjhiNyJ9fX0=
+
+see_decapitator_axolotl:
+  Id: player_head
+  Display: '<yellow>Axolotl Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2I5MTBmYmMyMTZmNzI0ZDI5NjU1MTU1YjJhMzg1OGE4MGYyMzRhMGNmZWQ2MDllMjJmYzY3MDY4M2FiNzc3YSJ9fX0=
+
+see_decapitator_bat:
+  Id: player_head
+  Display: '<yellow>Bat Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWU5OWRlZWY5MTlkYjY2YWMyYmQyOGQ2MzAyNzU2Y2NkNTdjN2Y4YjEyYjlkY2E4ZjQxYzNlMGEwNGFjMWNjIn19fQ==
+
+see_decapitator_bee:
+  Id: player_head
+  Display: '<yellow>Bee Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTI3MjRhOWE0Y2RkNjhiYTQ5NDE1NTYwZTViZTQwYjRhMWM0N2NiNWJlMWQ2NmFlZGI1MmEzMGU2MmVmMmQ0NyJ9fX0=
+
+see_decapitator_blaze:
+  Id: player_head
+  Display: '<yellow>Blaze Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjc4ZWYyZTRjZjJjNDFhMmQxNGJmZGU5Y2FmZjEwMjE5ZjViMWJmNWIzNWE0OWViNTFjNjQ2Nzg4MmNiNWYwIn19fQ==
+
+see_decapitator_bogged:
+  Id: player_head
+  Display: '<yellow>Bogged Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTNiOTAwM2JhMmQwNTU2MmM3NTExOWI4YTYyMTg1YzY3MTMwZTkyODJmN2FjYmFjNGJjMjgyNGMyMWViOTVkOSJ9fX0=
+
+see_decapitator_breeze:
+  Id: player_head
+  Display: '<yellow>Breeze Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTI3NTcyOGFmN2U2YTI5Yzg4MTI1YjY3NWEzOWQ4OGFlOTkxOWJiNjFmZGMyMDAzMzdmZWQ2YWIwYzQ5ZDY1YyJ9fX0=
+
+see_decapitator_camel_husk:
+  Id: player_head
+  Display: '<yellow>Camel Husk Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzUwYmZjOWIyY2M0MGY0ZDhkMDIyNGNjYmFiYWMyNmIzMzhhYTk0N2Q5OWRjZGU3NjlmODU5YjU5YjhkMGIwZSJ9fX0=
+
+see_decapitator_camel:
+  Id: player_head
+  Display: '<yellow>Camel Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzY0MmM5ZjcxMTMxYjVkZjRhOGMyMWM4YzZmMTA2ODRmMjJhYmFmYjhjZDY4YTFkNTVhYzRiZjI2M2E1M2EzMSJ9fX0=
+
+see_decapitator_cat:
+  Id: player_head
+  Display: '<yellow>Cat Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTRiNDVjYmFhMTlmZTNkNjhjODU2Y2QzODQ2YzAzYjVmNTlkZTgxYTQ4MGVlYzkyMWFiNGZhM2NkODEzMTcifX19
+
+see_decapitator_cave_spider:
+  Id: player_head
+  Display: '<yellow>Cave Spider Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTYxN2Y3ZGQ1ZWQxNmYzYmQxODY0NDA1MTdjZDQ0MGExNzAwMTViMWNjNmZjYjJlOTkzYzA1ZGUzM2YifX19
+
+see_decapitator_chicken_temperate:
+  Id: player_head
+  Display: '<yellow>Temperate Chicken Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTYzODQ2OWE1OTljZWVmNzIwNzUzNzYwMzI0OGE5YWIxMWZmNTkxZmQzNzhiZWE0NzM1YjM0NmE3ZmFlODkzIn19fQ==
+
+see_decapitator_cod:
+  Id: player_head
+  Display: '<yellow>Cod Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzg5MmQ3ZGQ2YWFkZjM1Zjg2ZGEyN2ZiNjNkYTRlZGRhMjExZGY5NmQyODI5ZjY5MTQ2MmE0ZmIxY2FiMCJ9fX0=
+
+see_decapitator_copper_golem:
+  Id: player_head
+  Display: '<yellow>Copper Golem Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjQ4ZTBmOWViMjRhMTA2MDA3Mjk0MzhkZDk5OTk3ODM5ZTFhOTllMjc2ZDc2ZTMyZmQ0MzRiZGI1ZjU0Mjk2YyJ9fX0=
+
+see_decapitator_cow_temperate:
+  Id: player_head
+  Display: '<yellow>Temperate Cow Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2RmYTBhYzM3YmFiYTJhYTI5MGU0ZmFlZTQxOWE2MTNjZDYxMTdmYTU2OGU3MDlkOTAzNzQ3NTNjMDMyZGNiMCJ9fX0=
+
+see_decapitator_creaking:
+  Id: player_head
+  Display: '<yellow>Creaking Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzM1ZDRkMDNlOWFmMzZiYjc4YjMyYzE5ZThmZGVmZDI5MjFjOWZkNmQxMmQ1OWU4ODA1YWEwNTQxMjQ1NmVlOCJ9fX0=
+
+see_decapitator_dolphin:
+  Id: player_head
+  Display: '<yellow>Dolphin Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU5Njg4Yjk1MGQ4ODBiNTViN2FhMmNmY2Q3NmU1YTBmYTk0YWFjNmQxNmY3OGU4MzNmNzQ0M2VhMjlmZWQzIn19fQ==
+
+see_decapitator_donkey:
+  Id: player_head
+  Display: '<yellow>Donkey Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjNhOTc2YzA0N2Y0MTJlYmM1Y2IxOTcxMzFlYmVmMzBjMDA0YzBmYWY0OWQ4ZGQ0MTA1ZmNhMTIwN2VkYWZmMyJ9fX0=
+
+see_decapitator_drowned:
+  Id: player_head
+  Display: '<yellow>Drowned Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzNmN2NjZjYxZGJjM2Y5ZmU5YTYzMzNjZGUwYzBlMTQzOTllYjJlZWE3MWQzNGNmMjIzYjNhY2UyMjA1MSJ9fX0=
+
+see_decapitator_elder_guardian:
+  Id: player_head
+  Display: '<yellow>Elder Guardian Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWM3OTc0ODJhMTRiZmNiODc3MjU3Y2IyY2ZmMWI2ZTZhOGI4NDEzMzM2ZmZiNGMyOWE2MTM5Mjc4YjQzNmIifX19
+
+see_decapitator_enderman:
+  Id: player_head
+  Display: '<yellow>Enderman Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTZjMGIzNmQ1M2ZmZjY5YTQ5YzdkNmYzOTMyZjJiMGZlOTQ4ZTAzMjIyNmQ1ZTgwNDVlYzU4NDA4YTM2ZTk1MSJ9fX0=
+
+see_decapitator_endermite:
+  Id: player_head
+  Display: '<yellow>Endermite Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWExYTA4MzFhYTAzYWZiNDIxMmFkY2JiMjRlNWRmYWE3ZjQ3NmExMTczZmNlMjU5ZWY3NWE4NTg1NSJ9fX0=
+
+see_decapitator_evoker:
+  Id: player_head
+  Display: '<yellow>Evoker Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDk1NDEzNWRjODIyMTM5NzhkYjQ3ODc3OGFlMTIxMzU5MWI5M2QyMjhkMzZkZDU0ZjFlYTFkYTQ4ZTdjYmE2In19fQ==
+
+see_decapitator_fox:
+  Id: player_head
+  Display: '<yellow>Fox Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDg5NTRhNDJlNjllMDg4MWFlNmQyNGQ0MjgxNDU5YzE0NGEwZDVhOTY4YWVkMzVkNmQzZDczYTNjNjVkMjZhIn19fQ==
+
+see_decapitator_frog_cold:
+  Id: player_head
+  Display: '<yellow>Cold Frog Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDU4NTJhOTU5Mjg4OTc3NDYwMTI5ODhmYmQ1ZGJhYTFiNzBiN2E1ZmI2NTE1NzAxNmY0ZmYzZjI0NTM3NGMwOCJ9fX0=
+
+see_decapitator_frog_temperate:
+  Id: player_head
+  Display: '<yellow>Temperate Frog Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGUzOGMwYzkzN2MyMjViZWUyYWI4ZGY2YmY3NDczMzQxOTI1YmMyNGI0MWE5MjMxOTU1ODQ3ODVmMTQ3ZmMzNCJ9fX0=
+
+see_decapitator_frog_warm:
+  Id: player_head
+  Display: '<yellow>Warm Frog Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGU4NjMzMmJkZDg1NjdlMzk2MDVmMGQxMWJhZTJlNDVlODYwM2E2ZDcxZGEwNjIwOGQ4MWFhM2U3ZTM5NzFjZCJ9fX0=
+
+see_decapitator_ghast:
+  Id: player_head
+  Display: '<yellow>Ghast Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGU4YTM4ZTlhZmJkM2RhMTBkMTliNTc3YzU1YzdiZmQ2YjRmMmU0MDdlNDRkNDAxN2IyM2JlOTE2N2FiZmYwMiJ9fX0=
+
+see_decapitator_glow_squid:
+  Id: player_head
+  Display: '<yellow>Glow Squid Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmVjZDBiNWViNmIzODRkYjA3NmQ4NDQ2MDY1MjAyOTU5ZGRkZmYwMTYxZTBkNzIzYjNkZjBjYzU4NmQxNmJiZCJ9fX0=
+
+see_decapitator_goat:
+  Id: player_head
+  Display: '<yellow>Goat Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDU3YTBkNTM4ZmEwOGE3YWZmZTMxMjkwMzQ2ODg2MTcyMGY5ZmEzNGU4NmQ0NGI4OWRjZWM1NjM5MjY1ZjAzIn19fQ==
+
+see_decapitator_guardian:
+  Id: player_head
+  Display: '<yellow>Guardian Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTBiZjM0YTcxZTc3MTViNmJhNTJkNWRkMWJhZTVjYjg1Zjc3M2RjOWIwZDQ1N2I0YmZjNWY5ZGQzY2M3Yzk0In19fQ==
+
+see_decapitator_happy_ghast:
+  Id: player_head
+  Display: '<yellow>Happy Ghast Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTFhMzZjYjkzZDAxNjc1YzQ2MjJkZDVjOGQ4NzIxMTA5MTFlYzEyYzM3MmU4OWFmYThiYTAzODYyODY3ZjZmYiJ9fX0=
+
+see_decapitator_hoglin:
+  Id: player_head
+  Display: '<yellow>Hoglin Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWJiOWJjMGYwMWRiZDc2MmEwOGQ5ZTc3YzA4MDY5ZWQ3Yzk1MzY0YWEzMGNhMTA3MjIwODU2MWI3MzBlOGQ3NSJ9fX0=
+
+see_decapitator_horse:
+  Id: player_head
+  Display: '<yellow>Horse Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjY2YjJiMzJkMzE1MzljNzM4M2Q5MjNiYWU0ZmFhZjY1ZGE2NzE1Y2Q1MjZjMzVkMmU0ZTY4MjVkYTExZmIifX19
+
+see_decapitator_husk:
+  Id: player_head
+  Display: '<yellow>Husk Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDY3NGM2M2M4ZGI1ZjRjYTYyOGQ2OWEzYjFmOGEzNmUyOWQ4ZmQ3NzVlMWE2YmRiNmNhYmI0YmU0ZGIxMjEifX19
+
+see_decapitator_illusioner:
+  Id: player_head
+  Display: '<yellow>Illusioner Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmYyODgyZGQwOTcyM2U0N2MwYWI5NjYzZWFiMDgzZDZhNTk2OTI3MzcwNjExMGM4MjkxMGU2MWJmOGE4ZjA3ZSJ9fX0=
+
+see_decapitator_iron_golem:
+  Id: player_head
+  Display: '<yellow>Iron Golem Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODkwOTFkNzllYTBmNTllZjdlZjk0ZDdiYmE2ZTVmMTdmMmY3ZDQ1NzJjNDRmOTBmNzZjNDgxOWE3MTQifX19
+
+see_decapitator_llama:
+  Id: player_head
+  Display: '<yellow>Llama Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODNkOWI1OTE1OTEyZmZjMmI4NTc2MWQ2YWRjYjQyOGE4MTJmOWI4M2ZmNjM0ZTMzMTE2MmNlNDZjOTllOSJ9fX0=
+
+see_decapitator_magma_cube:
+  Id: player_head
+  Display: '<yellow>Magma Cube Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTFjOTdhMDZlZmRlMDRkMDAyODdiZjIwNDE2NDA0YWIyMTAzZTEwZjA4NjIzMDg3ZTFiMGMxMjY0YTFjMGYwYyJ9fX0=
+
+see_decapitator_mule:
+  Id: player_head
+  Display: '<yellow>Mule Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDZkY2RhMjY1ZTU3ZTRmNTFiMTQ1YWFjYmY1YjU5YmRjNjA5OWZmZDNjY2UwYTY2MWIyYzAwNjVkODA5MzBkOCJ9fX0=
+
+see_decapitator_mushroom_cow_brown:
+  Id: player_head
+  Display: '<yellow>Brown Mooshroom Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWJkYzJlMTU4MDBmNDIzN2U1ZDMyN2YyYjQ3MTExNjk5YzhhODE4OGY3N2IwMzQ0ZWRhMGZkMGEwN2MxMTU4NCJ9fX0=
+
+see_decapitator_mushroom_cow_red:
+  Id: player_head
+  Display: '<yellow>Red Mushroom Cow Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmI1Mjg0MWYyZmQ1ODllMGJjODRjYmFiZjllMWMyN2NiNzBjYWM5OGY4ZDZiM2RkMDY1ZTU1YTRkY2I3MGQ3NyJ9fX0=
+
+see_decapitator_nautilus:
+  Id: player_head
+  Display: '<yellow>Nautilus Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjUzZDYzZWIxNzViMDBmYjM1Mjg1ZjQzMzBkMGJlNjhhMDcxM2RiOTRlMDBlNmZkZDg1ODMyZDQxZTNhMDhiIn19fQ==
+
+see_decapitator_ocelot:
+  Id: player_head
+  Display: '<yellow>Ocelot Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTY1N2NkNWMyOTg5ZmY5NzU3MGZlYzRkZGNkYzY5MjZhNjhhMzM5MzI1MGMxYmUxZjBiMTE0YTFkYjEifX19
+
+see_decapitator_panda_normal:
+  Id: player_head
+  Display: '<yellow>Normal Panda Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDE4OGM5ODBhYWNmYTk0Y2YzMzA4ODUxMmIxYjk1MTdiYTgyNmIxNTRkNGNhZmMyNjJhZmY2OTc3YmU4YSJ9fX0=
+
+see_decapitator_parched:
+  Id: player_head
+  Display: '<yellow>Parched Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjRhZWNlZmY1ZjI2ZGQ4NDEzYzVjMDM1NDdjMjM0YWMwMzEwOGQxODdhZjBiOWNkODM0YThjZTEyNTk4NTkxYyJ9fX0=
+
+see_decapitator_parrot:
+  Id: player_head
+  Display: '<yellow>Parrot Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjBiZmE4NTBmNWRlNGIyOTgxY2NlNzhmNTJmYzJjYzdjZDdiNWM2MmNhZWZlZGRlYjljZjMxMWU4M2Q5MDk3In19fQ==
+
+see_decapitator_phantom:
+  Id: player_head
+  Display: '<yellow>Phantom Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDExZDI1YmNkYWJhZmFkNWZkNmUwMTBjNWIxY2Y3YTAwYzljY2E0MGM1YTQ2NzQ3ZjcwNmRjOWNiM2EifX19
+
+see_decapitator_piglin_brute:
+  Id: player_head
+  Display: '<yellow>Piglin Brute Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2NlZDlkODAxYWE2ZjgzZjhlNDlmOTBkOWE4Yjg1YjdmOGZkYTU4M2Q4NWY3MmNmZmI2OTg2NzI1Nzg5ZjYzNiJ9fX0=
+
+see_decapitator_pig_temperate:
+  Id: player_head
+  Display: '<yellow>Temperate Pig Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWEzNzFhMDZlYTc4NThmODlkMjdjYzEwNTVjMzE3YjIzZjEwNWM5MTI1YmM1MTZkMzg5MWFhNGM4MzVjMjk5In19fQ==
+
+see_decapitator_pillager:
+  Id: player_head
+  Display: '<yellow>Pillager Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGFlZTZiYjM3Y2JmYzkyYjBkODZkYjVhZGE0NzkwYzY0ZmY0NDY4ZDY4Yjg0OTQyZmRlMDQ0MDVlOGVmNTMzMyJ9fX0=
+
+see_decapitator_polar_bear:
+  Id: player_head
+  Display: '<yellow>Polar Bear Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzRmZTkyNjkyMmZiYjQwNmYzNDNiMzRhMTBiYjk4OTkyY2VlNDQxMDEzN2QzZjg4MDk5NDI3YjIyZGUzYWI5MCJ9fX0=
+
+see_decapitator_pufferfish:
+  Id: player_head
+  Display: '<yellow>Pufferfish Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjkyMzUwYzlmMDk5M2VkNTRkYjJjNzExMzkzNjMyNTY4M2ZmYzIwMTA0YTliNjIyYWE0NTdkMzdlNzA4ZDkzMSJ9fX0=
+
+see_decapitator_rabbit:
+  Id: player_head
+  Display: '<yellow>Rabbit Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzk3N2EzMjY2YmYzYjllYWYxN2U1YTAyZWE1ZmJiNDY4MDExNTk4NjNkZDI4OGI5M2U2YzEyYzljYiJ9fX0=
+
+see_decapitator_ravager:
+  Id: player_head
+  Display: '<yellow>Ravager Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2QyMGJmNTJlYzM5MGEwNzk5Mjk5MTg0ZmM2NzhiZjg0Y2Y3MzJiYjFiZDc4ZmQxYzRiNDQxODU4ZjAyMzVhOCJ9fX0=
+
+see_decapitator_salmon:
+  Id: player_head
+  Display: '<yellow>Salmon Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjBlYTlhMjIzNjIwY2RiNTRiMzU3NDEzZDQzYmQ4OWM0MDA4YmNhNmEyMjdmM2I3ZGI5N2Y3NzMzZWFkNWZjZiJ9fX0=
+
+see_decapitator_sheep:
+  Id: player_head
+  Display: '<yellow>Sheep Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjMxZjljY2M2YjNlMzJlY2YxM2I4YTExYWMyOWNkMzNkMThjOTVmYzczZGI4YTY2YzVkNjU3Y2NiOGJlNzAifX19
+
+see_decapitator_shulker:
+  Id: player_head
+  Display: '<yellow>Shulker Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjVhYmY5MTUxNzYwYzkzOTVmYWU0ZjNkMjUxN2JkZjU3ODM3ODE1ZDI1NDUzNzg3MDU5NjI3MGNiN2ZmMTk2In19fQ==
+
+see_decapitator_silverfish:
+  Id: player_head
+  Display: '<yellow>Silverfish Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGE5MWRhYjgzOTFhZjVmZGE1NGFjZDJjMGIxOGZiZDgxOWI4NjVlMWE4ZjFkNjIzODEzZmE3NjFlOTI0NTQwIn19fQ==
+
+see_decapitator_skeleton_horse:
+  Id: player_head
+  Display: '<yellow>Skeleton Horse Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDdlZmZjZTM1MTMyYzg2ZmY3MmJjYWU3N2RmYmIxZDIyNTg3ZTk0ZGYzY2JjMjU3MGVkMTdjZjg5NzNhIn19fQ==
+
+see_decapitator_slime:
+  Id: player_head
+  Display: '<yellow>Slime Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODk1YWVlYzZiODQyYWRhODY2OWY4NDZkNjViYzQ5NzYyNTk3ODI0YWI5NDRmMjJmNDViZjNiYmI5NDFhYmU2YyJ9fX0=
+
+see_decapitator_sniffer:
+  Id: player_head
+  Display: '<yellow>Sniffer Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmIxZDA2YzlkMmZkMThkYjY3MzliNGY4NzBiYzg2MTBiYzVhYzliZGJiMTY1YzlmMWM3YjhiZGUzOWM3ODM2NCJ9fX0=
+
+see_decapitator_snowman:
+  Id: player_head
+  Display: '<yellow>Snowman Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU4ZDIwNmY2MWU2ZGU4YTc5ZDBjYjBiY2Q5OGFjZWQ0NjRjYmZlZmM5MjFiNDE2MGEyNTI4MjE2MzExMmEifX19
+
+see_decapitator_spider:
+  Id: player_head
+  Display: '<yellow>Spider Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q1NDE1NDFkYWFmZjUwODk2Y2QyNThiZGJkZDRjZjgwYzNiYTgxNjczNTcyNjA3OGJmZTM5MzkyN2U1N2YxIn19fQ==
+
+see_decapitator_squid:
+  Id: player_head
+  Display: '<yellow>Squid Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDljMmM5Y2U2N2ViNTk3MWNjNTk1ODQ2M2U2YzlhYmFiOGU1OTlhZGMyOTVmNGQ0MjQ5OTM2YjAwOTU3NjlkZCJ9fX0=
+
+see_decapitator_stray:
+  Id: player_head
+  Display: '<yellow>Stray Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmM1MDk3OTE2YmMwNTY1ZDMwNjAxYzBlZWJmZWIyODcyNzdhMzRlODY3YjRlYTQzYzYzODE5ZDUzZTg5ZWRlNyJ9fX0=
+
+see_decapitator_strider:
+  Id: player_head
+  Display: '<yellow>Strider Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2I3ZmZkZGE2NTZjNjhkODg4NTFhOGUwNWI0OGNkMjQ5Mzc3M2ZmYzRhYjdkNjRlOTMwMjIyOWZlMzU3MTA1OSJ9fX0=
+
+see_decapitator_tadpole:
+  Id: player_head
+  Display: '<yellow>Tadpole Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTg3MDM1ZjUzNTIzMzRjMmNiYTZhYzRjNjVjMmI5MDU5NzM5ZDZkMGU4MzljMWRkOThkNzVkMmU3Nzk1Nzg0NyJ9fX0=
+
+see_decapitator_trader_llama:
+  Id: player_head
+  Display: '<yellow>Trader Llama Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQyNDc4MGIzYzVjNTM1MWNmNDlmYjViZjQxZmNiMjg5NDkxZGY2YzQzMDY4M2M4NGQ3ODQ2MTg4ZGI0Zjg0ZCJ9fX0=
+
+see_decapitator_tropical_fish:
+  Id: player_head
+  Display: '<yellow>Tropical Fish Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDZkZDVlNmFkZGI1NmFjYmM2OTRlYTRiYTU5MjNiMWIyNTY4ODE3OGZlZmZhNzIyOTAyOTllMjUwNWM5NzI4MSJ9fX0=
+
+see_decapitator_turtle:
+  Id: player_head
+  Display: '<yellow>Turtle Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMGE0MDUwZTdhYWNjNDUzOTIwMjY1OGZkYzMzOWRkMTgyZDdlMzIyZjlmYmNjNGQ1Zjk5YjU3MThhIn19fQ==
+
+see_decapitator_vex:
+  Id: player_head
+  Display: '<yellow>Vex Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzJlYzVhNTE2NjE3ZmYxNTczY2QyZjlkNWYzOTY5ZjU2ZDU1NzVjNGZmNGVmZWZhYmQyYTE4ZGM3YWI5OGNkIn19fQ==
+
+see_decapitator_villager:
+  Id: player_head
+  Display: '<yellow>Villager Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDFiODMwZWI0MDgyYWNlYzgzNmJjODM1ZTQwYTExMjgyYmI1MTE5MzMxNWY5MTE4NDMzN2U4ZDM1NTU1ODMifX19
+
+see_decapitator_vindicator:
+  Id: player_head
+  Display: '<yellow>Vindicator Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmRlYWVjMzQ0YWIwOTViNDhjZWFkNzUyN2Y3ZGVlNjFiMDYzZmY3OTFmNzZhOGZhNzY2NDJjODY3NmUyMTczIn19fQ==
+
+see_decapitator_wandering_trader:
+  Id: player_head
+  Display: '<yellow>Wandering Trader Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWYxMzc5YTgyMjkwZDdhYmUxZWZhYWJiYzcwNzEwZmYyZWMwMmRkMzRhZGUzODZiYzAwYzkzMGM0NjFjZjkzMiJ9fX0=
+
+see_decapitator_warden:
+  Id: player_head
+  Display: '<yellow>Warden Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTk1M2NmYjY5NmQ5ZTQ3NjkzYjJhNzhmM2ViZjhiODk5NDFiZmE4MzY2OGUwZjgzY2ZmNzQ1YjY5ZTkwMzIxZCJ9fX0=
+
+see_decapitator_witch:
+  Id: player_head
+  Display: '<yellow>Witch Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjBlMTNkMTg0NzRmYzk0ZWQ1NWFlYjcwNjk1NjZlNDY4N2Q3NzNkYWMxNmY0YzNmODcyMmZjOTViZjlmMmRmYSJ9fX0=
+
+see_decapitator_wither:
+  Id: player_head
+  Display: '<yellow>Wither Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzRmMzI4ZjUwNDQxMjliNWQxZjk2YWZmZDFiOGMwNWJjZGU2YmQ4ZTc1NmFmZjVjNTAyMDU4NWVlZjhhM2RhZiJ9fX0=
+
+see_decapitator_wolf_pale:
+  Id: player_head
+  Display: '<yellow>Pale Wolf Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDA0OThkZTZmNWIwOWUwY2UzNWE3MjkyZmU1MGI3OWZjZTkwNjVkOWJlOGUyYTg3YzdhMTM1NjZlZmIyNmQ3MiJ9fX0=
+
+see_decapitator_zoglin:
+  Id: player_head
+  Display: '<yellow>Zoglin Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTY3ZTE4NjAyZTAzMDM1YWQ2ODk2N2NlMDkwMjM1ZDg5OTY2NjNmYjllYTQ3NTc4ZDNhN2ViYmM0MmE1Y2NmOSJ9fX0=
+
+see_decapitator_zombie_horse:
+  Id: player_head
+  Display: '<yellow>Zombie Horse Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDIyOTUwZjJkM2VmZGRiMThkZTg2ZjhmNTVhYzUxOGRjZTczZjEyYTZlMGY4NjM2ZDU1MWQ4ZWI0ODBjZWVjIn19fQ==
+
+see_decapitator_zombie_nautilus:
+  Id: player_head
+  Display: '<yellow>Zombie Nautilus Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmQ5YTkzMzM3NmRhNDRjMzM5MTMwN2NiOWY0Y2YwM2YxNmYzYTU0ZjQ5NWZkNWExMWJhZDhhMzczZjlkNTcyMCJ9fX0=
+
+see_decapitator_zombie_villager:
+  Id: player_head
+  Display: '<yellow>Zombie Villager Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTVlMDhhODc3NmMxNzY0YzNmZTZhNmRkZDQxMmRmY2I4N2Y0MTMzMWRhZDQ3OWFjOTZjMjFkZjRiZjNhYzg5YyJ9fX0=
+
+see_decapitator_zombified_piglin:
+  Id: player_head
+  Display: '<yellow>Zombified Piglin Head'
+  Options:
+    Placeable: true
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2VhYmFlY2M1ZmFlNWE4YTQ5Yzg4NjNmZjQ4MzFhYWEyODQxOThmMWEyMzk4ODkwYzc2NWUwYThkZTE4ZGE4YyJ9fX0=
+

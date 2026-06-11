@@ -1,0 +1,484 @@
+
+see_thrifty_effects:
+  Skills:
+  - sudo{skill=[ - hide{d=600} @server ]}
+  - delay 1
+  - sudo{skill=[ - showentity @trigger ];cat=true}
+  - aura{duration=600;name=dropeffect;i=5;
+    ontick=[ - particles{particle=happy_villager;amount=2;hS=0.1;vS=0.1;audience=caster} ];
+    components=[ - glow{glowcolor=RED} ]}
+  - sudo{skill=[ - jump{v=0.5;repeat=12;repeatI=50}]}
+
+  - sound{s=entity.experience_orb.pickup;v=0.6;p=1.4;audience=caster}
+
+
+see_thrifty_mob:
+  Conditions:
+  - hasenchant{enchantment=looting;level=3} castInstead see_thrifty_mob-looting3
+  - hasenchant{enchantment=looting;level=2} castInstead see_thrifty_mob-looting2
+  - hasenchant{enchantment=looting;level=1} castInstead see_thrifty_mob-looting1
+  - chance{c=<math.enchant_level*0.005>}
+  Skills:
+  - skill{s=see_thrifty_mob-drops}
+
+see_thrifty_mob-looting1:
+  Conditions:
+  - chance{c=<math.enchant_level*0.005+0.015>}
+  Skills:
+  - skill{s=see_thrifty_mob-drops}
+see_thrifty_mob-looting2:
+  Conditions:
+  - chance{c=<math.enchant_level*0.005+0.025>} 
+  Skills:
+  - skill{s=see_thrifty_mob-drops}
+see_thrifty_mob-looting3:
+  Conditions:
+  - chance{c=<math.enchant_level*0.005+0.035>}
+  Skills:
+  - skill{s=see_thrifty_mob-drops}
+
+see_thrifty_mob-drops: #Ender Dragon and Wither are intentionally left commented out. If you feel your server is right for it, feel free to uncomment to enable. Good luck. 
+  TriggerConditions:
+  - entitytype{type=ALLAY} castInstead see_thrifty_drop-allay
+  - entitytype{type=ARMADILLO} castInstead see_thrifty_drop-armadillo
+  - entitytype{type=AXOLOTL} castInstead see_thrifty_drop-axolotl
+  - entitytype{type=BAT} castInstead see_thrifty_drop-bat
+  - entitytype{type=BEE} castInstead see_thrifty_drop-bee
+  - entitytype{type=BLAZE} castInstead see_thrifty_drop-blaze
+  - entitytype{type=BOGGED} castInstead see_thrifty_drop-bogged
+  - entitytype{type=BREEZE} castInstead see_thrifty_drop-breeze
+  - entitytype{type=CAMEL_HUSK} castInstead see_thrifty_drop-camel_husk
+  - entitytype{type=CAMEL} castInstead see_thrifty_drop-camel
+  - entitytype{type=CAT} castInstead see_thrifty_drop-cat
+  - entitytype{type=CAVE_SPIDER} castInstead see_thrifty_drop-cave_spider
+  - entitytype{type=CHICKEN} castInstead see_thrifty_drop-chicken
+  - entitytype{type=COD} castInstead see_thrifty_drop-cod
+  - entitytype{type=COPPER_GOLEM} castInstead see_thrifty_drop-copper_golem
+  - entitytype{type=COW} castInstead see_thrifty_drop-cow
+  - entitytype{type=CREAKING} castInstead see_thrifty_drop-creaking
+  - entitytype{type=CREEPER} castInstead see_thrifty_drop-creeper
+  - entitytype{type=DOLPHIN} castInstead see_thrifty_drop-dolphin
+  - entitytype{type=DONKEY} castInstead see_thrifty_drop-donkey
+  - entitytype{type=DROWNED} castInstead see_thrifty_drop-drowned
+  - entitytype{type=ELDER_GUARDIAN} castInstead see_thrifty_drop-elder_guardian
+  - entitytype{type=ENDERMAN} castInstead see_thrifty_drop-enderman
+  # - entitytype{type=ENDER_DRAGON} castInstead see_thrifty_drop-ender_dragon
+  - entitytype{type=ENDERMITE} castInstead see_thrifty_drop-endermite
+  - entitytype{type=EVOKER} castInstead see_thrifty_drop-evoker
+  - entitytype{type=FOX} castInstead see_thrifty_drop-fox
+  - entitytype{type=FROG} castInstead see_thrifty_drop-frog
+  - entitytype{type=GHAST} castInstead see_thrifty_drop-ghast
+  - entitytype{type=GLOW_SQUID} castInstead see_thrifty_drop-glow_squid
+  - entitytype{type=GOAT} castInstead see_thrifty_drop-goat
+  - entitytype{type=GUARDIAN} castInstead see_thrifty_drop-guardian
+  - entitytype{type=HAPPY_GHAST} castInstead see_thrifty_drop-happy_ghast
+  - entitytype{type=HOGLIN} castInstead see_thrifty_drop-hoglin
+  - entitytype{type=HORSE} castInstead see_thrifty_drop-horse
+  - entitytype{type=HUSK} castInstead see_thrifty_drop-husk
+  # - entitytype{type=ILLUSIONER} castInstead see_thrifty_drop-illusioner
+  - entitytype{type=IRON_GOLEM} castInstead see_thrifty_drop-iron_golem
+  - entitytype{type=LLAMA} castInstead see_thrifty_drop-llama
+  - entitytype{type=MAGMA_CUBE} castInstead see_thrifty_drop-magma_cube
+  - entitytype{type=MULE} castInstead see_thrifty_drop-mule
+  - entitytype{type=MOOSHROOM} castInstead see_thrifty_drop-mooshroom
+  - entitytype{type=NAUTILUS} castInstead see_thrifty_drop-nautilus
+  - entitytype{type=OCELOT} castInstead see_thrifty_drop-ocelot
+  - entitytype{type=PANDA} castInstead see_thrifty_drop-panda
+  - entitytype{type=PARCHED} castInstead see_thrifty_drop-parched
+  - entitytype{type=PARROT} castInstead see_thrifty_drop-parrot
+  - entitytype{type=PHANTOM} castInstead see_thrifty_drop-phantom
+  - entitytype{type=PIGLIN_BRUTE} castInstead see_thrifty_drop-piglin_brute
+  - entitytype{type=PIGLIN} castInstead see_thrifty_drop-piglin
+  - entitytype{type=PIG} castInstead see_thrifty_drop-pig
+  - entitytype{type=PILLAGER} castInstead see_thrifty_drop-pillager
+  - entitytype{type=POLAR_BEAR} castInstead see_thrifty_drop-polar_bear
+  - entitytype{type=PUFFERFISH} castInstead see_thrifty_drop-pufferfish
+  - entitytype{type=RABBIT} castInstead see_thrifty_drop-rabbit
+  - entitytype{type=RAVAGER} castInstead see_thrifty_drop-ravager
+  - entitytype{type=SALMON} castInstead see_thrifty_drop-salmon
+  - entitytype{type=SHEEP} castInstead see_thrifty_drop-sheep
+  - entitytype{type=SHULKER} castInstead see_thrifty_drop-shulker
+  - entitytype{type=SILVERFISH} castInstead see_thrifty_drop-silverfish
+  - entitytype{type=SKELETON_HORSE} castInstead see_thrifty_drop-skeleton_horse
+  - entitytype{type=SKELETON} castInstead see_thrifty_drop-skeleton
+  - entitytype{type=SLIME} castInstead see_thrifty_drop-slime
+  - entitytype{type=SNIFFER} castInstead see_thrifty_drop-sniffer
+  - entitytype{type=SNOW_GOLEM} castInstead see_thrifty_drop-snow_golem
+  - entitytype{type=SPIDER} castInstead see_thrifty_drop-spider
+  - entitytype{type=SQUID} castInstead see_thrifty_drop-squid
+  - entitytype{type=STRAY} castInstead see_thrifty_drop-stray
+  - entitytype{type=STRIDER} castInstead see_thrifty_drop-strider
+  - entitytype{type=TADPOLE} castInstead see_thrifty_drop-tadpole
+  - entitytype{type=TRADER_LLAMA} castInstead see_thrifty_drop-trader_llama
+  - entitytype{type=TROPICAL_FISH} castInstead see_thrifty_drop-tropical_fish
+  - entitytype{type=TURTLE} castInstead see_thrifty_drop-turtle
+  - entitytype{type=VEX} castInstead see_thrifty_drop-vex
+  - entitytype{type=VILLAGER} castInstead see_thrifty_drop-villager
+  - entitytype{type=VINDICATOR} castInstead see_thrifty_drop-vindicator
+  - entitytype{type=WANDERING_TRADER} castInstead see_thrifty_drop-wandering_trader
+  - entitytype{type=WARDEN} castInstead see_thrifty_drop-warden
+  - entitytype{type=WITCH} castInstead see_thrifty_drop-witch
+  - entitytype{type=WITHER_SKELETON} castInstead see_thrifty_drop-wither_skeleton
+  # - entitytype{type=WITHER} castInstead see_thrifty_drop-wither
+  - entitytype{type=WOLF} castInstead see_thrifty_drop-wolf
+  - entitytype{type=ZOGLIN} castInstead see_thrifty_drop-zoglin
+  - entitytype{type=ZOMBIE_HORSE} castInstead see_thrifty_drop-zombie_horse
+  - entitytype{type=ZOMBIE_NAUTILUS} castInstead see_thrifty_drop-zombie_nautilus
+  - entitytype{type=ZOMBIE_VILLAGER} castInstead see_thrifty_drop-zombie_villager
+  - entitytype{type=ZOMBIE} castInstead see_thrifty_drop-zombie
+  - entitytype{type=ZOMBIFIED_PIGLIN} castInstead see_thrifty_drop-zombified_piglin
+
+
+
+see_thrifty_drop-allay:
+  Skills:
+  - dropitem{item=ALLAY_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-armadillo:
+  Skills:
+  - dropitem{item=ARMADILLO_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-axolotl:
+  Skills:
+  - dropitem{item=AXOLOTL_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-bat:
+  Skills:
+  - dropitem{item=BAT_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-bee:
+  Skills:
+  - dropitem{item=BEE_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-blaze:
+  Skills:
+  - dropitem{item=BLAZE_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-bogged:
+  Skills:
+  - dropitem{item=BOGGED_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-breeze:
+  Skills:
+  - dropitem{item=BREEZE_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-camel_husk:
+  Skills:
+  - dropitem{item=CAMEL_HUSK_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-camel:
+  Skills:
+  - dropitem{item=CAMEL_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-cat:
+  Skills:
+  - dropitem{item=CAT_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-cave_spider:
+  Skills:
+  - dropitem{item=CAVE_SPIDER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-chicken:
+  Skills:
+  - dropitem{item=CHICKEN_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-cod:
+  Skills:
+  - dropitem{item=COD_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-copper_golem:
+  Skills:
+  - dropitem{item=COPPER_GOLEM_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-cow:
+  Skills:
+  - dropitem{item=COW_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-creaking:
+  Skills:
+  - dropitem{item=CREAKING_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-creeper:
+  Skills:
+  - dropitem{item=CREEPER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-dolphin:
+  Skills:
+  - dropitem{item=DOLPHIN_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-donkey:
+  Skills:
+  - dropitem{item=DONKEY_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-drowned:
+  Skills:
+  - dropitem{item=DROWNED_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-elder_guardian:
+  Skills:
+  - dropitem{item=ELDER_GUARDIAN_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-enderman:
+  Skills:
+  - dropitem{item=ENDERMAN_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-ender_dragon:
+  Skills:
+  - dropitem{item=ENDER_DRAGON_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-endermite:
+  Skills:
+  - dropitem{item=ENDERMITE_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-evoker:
+  Skills:
+  - dropitem{item=EVOKER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-fox:
+  Skills:
+  - dropitem{item=FOX_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-frog:
+  Skills:
+  - dropitem{item=FROG_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-ghast:
+  Skills:
+  - dropitem{item=GHAST_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-glow_squid:
+  Skills:
+  - dropitem{item=GLOW_SQUID_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-goat:
+  Skills:
+  - dropitem{item=GOAT_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-guardian:
+  Skills:
+  - dropitem{item=GUARDIAN_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-happy_ghast:
+  Skills:
+  - dropitem{item=HAPPY_GHAST_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-hoglin:
+  Skills:
+  - dropitem{item=HOGLIN_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-horse:
+  Skills:
+  - dropitem{item=HORSE_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-husk:
+  Skills:
+  - dropitem{item=HUSK_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+# see_thrifty_drop-illusioner:
+#   Skills:
+#   - dropitem{item=ILLUSIONER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-iron_golem:
+  Skills:
+  - dropitem{item=IRON_GOLEM_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-llama:
+  Skills:
+  - dropitem{item=LLAMA_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-magma_cube:
+  Skills:
+  - dropitem{item=MAGMA_CUBE_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-mule:
+  Skills:
+  - dropitem{item=MULE_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-mooshroom:
+  Skills:
+  - dropitem{item=MOOSHROOM_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-nautilus:
+  Skills:
+  - dropitem{item=NAUTILUS_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-ocelot:
+  Skills:
+  - dropitem{item=OCELOT_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-panda:
+  Skills:
+  - dropitem{item=PANDA_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-parched:
+  Skills:
+  - dropitem{item=PARCHED_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-parrot:
+  Skills:
+  - dropitem{item=PARROT_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-phantom:
+  Skills:
+  - dropitem{item=PHANTOM_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-piglin_brute:
+  Skills:
+  - dropitem{item=PIGLIN_BRUTE_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-piglin:
+  Skills:
+  - dropitem{item=PIGLIN_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-pig:
+  Skills:
+  - dropitem{item=PIG_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-pillager:
+  Skills:
+  - dropitem{item=PILLAGER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-polar_bear:
+  Skills:
+  - dropitem{item=POLAR_BEAR_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-pufferfish:
+  Skills:
+  - dropitem{item=PUFFERFISH_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-rabbit:
+  Skills:
+  - dropitem{item=RABBIT_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-ravager:
+  Skills:
+  - dropitem{item=RAVAGER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-salmon:
+  Skills:
+  - dropitem{item=SALMON_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-sheep:
+  Skills:
+  - dropitem{item=SHEEP_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-shulker:
+  Skills:
+  - dropitem{item=SHULKER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-silverfish:
+  Skills:
+  - dropitem{item=SILVERFISH_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-skeleton_horse:
+  Skills:
+  - dropitem{item=SKELETON_HORSE_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-skeleton:
+  Skills:
+  - dropitem{item=SKELETON_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-slime:
+  Skills:
+  - dropitem{item=SLIME_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-sniffer:
+  Skills:
+  - dropitem{item=SNIFFER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-snow_golem:
+  Skills:
+  - dropitem{item=SNOW_GOLEM_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-spider:
+  Skills:
+  - dropitem{item=SPIDER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-squid:
+  Skills:
+  - dropitem{item=SQUID_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-stray:
+  Skills:
+  - dropitem{item=STRAY_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-strider:
+  Skills:
+  - dropitem{item=STRIDER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-tadpole:
+  Skills:
+  - dropitem{item=TADPOLE_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-trader_llama:
+  Skills:
+  - dropitem{item=TRADER_LLAMA_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-tropical_fish:
+  Skills:
+  - dropitem{item=TROPICAL_FISH_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-turtle:
+  Skills:
+  - dropitem{item=TURTLE_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-vex:
+  Skills:
+  - dropitem{item=VEX_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-villager:
+  Skills:
+  - dropitem{item=VILLAGER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-vindicator:
+  Skills:
+  - dropitem{item=VINDICATOR_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-wandering_trader:
+  Skills:
+  - dropitem{item=WANDERING_TRADER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-warden:
+  Skills:
+  - dropitem{item=WARDEN_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-witch:
+  Skills:
+  - dropitem{item=WITCH_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-wither_skeleton:
+  Skills:
+  - dropitem{item=WITHER_SKELETON_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-wither:
+  Skills:
+  - dropitem{item=WITHER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-wolf:
+  Skills:
+  - dropitem{item=WOLF_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-zoglin:
+  Skills:
+  - dropitem{item=ZOGLIN_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-zombie_horse:
+  Skills:
+  - dropitem{item=ZOMBIE_HORSE_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-zombie_nautilus:
+  Skills:
+  - dropitem{item=ZOMBIE_NAUTILUS_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-zombie_villager:
+  Skills:
+  - dropitem{item=ZOMBIE_VILLAGER_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-zombie:
+  Skills:
+  - dropitem{item=ZOMBIE_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+
+see_thrifty_drop-zombified_piglin:
+  Skills:
+  - dropitem{item=ZOMBIFIED_PIGLIN_SPAWN_EGG;onDrop=see_thrifty_effects} @triggerlocation
+

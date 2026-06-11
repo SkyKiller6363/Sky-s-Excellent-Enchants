@@ -1,0 +1,224 @@
+see_tunnel:
+  Conditions:
+  - HasEnchantment{enchantment=see:tunnel;level=1} castinstead see_tunnel_1
+  - HasEnchantment{enchantment=see:tunnel;level=2} castinstead see_tunnel_2
+  - HasEnchantment{enchantment=see:tunnel;level=3} castinstead see_tunnel_3
+
+# Tunnel 1
+see_tunnel_1:
+  Conditions:
+  - stringequals{val1="OBSIDIAN";val2=<trigger.raytrace>} castinstead see_tunnel_1_regular_obsidian
+  Skills:
+  - skill:see_tunnel_1_regular
+
+see_tunnel_1_regular:
+  Conditions:
+  - (pitch{p=-90to-45} || pitch{p=45to90}) castinstead see_tunnel_1_vertical_router
+  Skills:
+  - breakblock @targetblock{y=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{y=-1;blockignores=obsidian,*wither_immune}
+  # - breakblock @targetblock{;blockignores=obsidian,*wither_immune}
+
+see_tunnel_1_vertical_router:
+  Conditions:
+  - (yaw{clamp=false;yaw=45to135} || yaw{clamp=false;yaw=-135to-45}) castinstead see_tunnel_1_vertical_ew
+  - (yaw{clamp=false;yaw=-45to45} || yaw{clamp=false;yaw=135to180} || yaw{clamp=false;yaw=-180to-135}) castinstead see_tunnel_1_vertical_ns
+
+see_tunnel_1_vertical_ew:
+  Skills:
+  - breakblock @targetblock{x=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{x=-1;blockignores=obsidian,*wither_immune}
+  # - breakblock @targetblock{;blockignores=obsidian,*wither_immune}
+
+see_tunnel_1_vertical_ns:
+  Skills:
+  - breakblock @targetblock{z=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{z=-1;blockignores=obsidian,*wither_immune}
+  # - breakblock @targetblock{;blockignores=obsidian,*wither_immune}
+
+see_tunnel_1_regular_obsidian:
+  Conditions:
+  - (pitch{p=-90to-45} || pitch{p=45to90}) castinstead see_tunnel_1_vertical_router_obsidian
+  Skills:
+  - breakblock @targetblock{y=1;blockignores=*wither_immune}
+  - breakblock @targetblock{y=-1;blockignores=*wither_immune}
+  # - breakblock @targetblock{;blockignores=*wither_immune}
+
+see_tunnel_1_vertical_router_obsidian:
+  Conditions:
+  - (yaw{clamp=false;yaw=45to135} || yaw{clamp=false;yaw=-135to-45}) castinstead see_tunnel_1_vertical_ew_obsidian
+  - (yaw{clamp=false;yaw=-45to45} || yaw{clamp=false;yaw=135to180} || yaw{clamp=false;yaw=-180to-135}) castinstead see_tunnel_1_vertical_ns_obsidian
+
+see_tunnel_1_vertical_ew_obsidian:
+  Skills:
+  - breakblock @targetblock{x=1;blockignores=*wither_immune}
+  - breakblock @targetblock{x=-1;blockignores=*wither_immune}
+  # - breakblock @targetblock{;blockignores=*wither_immune}
+
+see_tunnel_1_vertical_ns_obsidian:
+  Skills:
+  - breakblock @targetblock{z=1;blockignores=*wither_immune}
+  - breakblock @targetblock{z=-1;blockignores=*wither_immune}
+  # - breakblock @targetblock{;blockignores=*wither_immune}
+
+### Tunnel 2 ###
+see_tunnel_2:
+  Conditions:
+  - stringequals{val1="OBSIDIAN";val2=<trigger.raytrace>} castinstead see_tunnel_2_regular_obsidian
+  Skills:
+  - skill:see_tunnel_2_regular
+
+see_tunnel_2_regular:
+  Conditions:
+  - (pitch{p=-90to-45} || pitch{p=45to90}) orElseCast see_tunnel_2_vertical_router
+  Skills:
+  - breakblock @targetblock{x=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{x=-1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{z=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{z=-1;blockignores=obsidian,*wither_immune}
+  # - breakblock @targetblock{;blockignores=obsidian,*wither_immune}
+
+see_tunnel_2_vertical_router:
+  Conditions:
+  - (yaw{clamp=false;yaw=45to135} || yaw{clamp=false;yaw=-135to-45}) castinstead see_tunnel_2_vertical_ew
+  - (yaw{clamp=false;yaw=-45to45} || yaw{clamp=false;yaw=135to180} || yaw{clamp=false;yaw=-180to-135}) castinstead see_tunnel_2_vertical_ns
+
+see_tunnel_2_vertical_ew:
+  Skills:
+  - breakblock @targetblock{z=-1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{z=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{y=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{y=-1;blockignores=obsidian,*wither_immune}
+  # - breakblock @targetblock{;blockignores=obsidian,*wither_immune}
+
+see_tunnel_2_vertical_ns:
+  Skills:
+  - breakblock @targetblock{x=-1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{x=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{y=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{y=-1;blockignores=obsidian,*wither_immune}
+  # - breakblock @targetblock{;blockignores=obsidian,*wither_immune}
+
+see_tunnel_2_regular_obsidian:
+  Conditions:
+  - (pitch{p=-90to-45} || pitch{p=45to90}) orElseCast see_tunnel_2_vertical_router_obsidian
+  Skills:
+  - breakblock @targetblock{x=1;blockignores=*wither_immune}
+  - breakblock @targetblock{x=-1;blockignores=*wither_immune}
+  - breakblock @targetblock{z=1;blockignores=*wither_immune}
+  - breakblock @targetblock{z=-1;blockignores=*wither_immune}
+  # - breakblock @targetblock{;blockignores=*wither_immune}
+
+see_tunnel_2_vertical_router_obsidian:
+  Conditions:
+  - (yaw{clamp=false;yaw=45to135} || yaw{clamp=false;yaw=-135to-45}) castinstead see_tunnel_2_vertical_ew_obsidian
+  - (yaw{clamp=false;yaw=-45to45} || yaw{clamp=false;yaw=135to180} || yaw{clamp=false;yaw=-180to-135}) castinstead see_tunnel_2_vertical_ns_obsidian
+
+see_tunnel_2_vertical_ew_obsidian:
+  Skills:
+  - breakblock @targetblock{z=-1;blockignores=*wither_immune}
+  - breakblock @targetblock{z=1;blockignores=*wither_immune}
+  - breakblock @targetblock{y=1;blockignores=*wither_immune}
+  - breakblock @targetblock{y=-1;blockignores=*wither_immune}
+  # - breakblock @targetblock{;blockignores=*wither_immune}
+
+see_tunnel_2_vertical_ns_obsidian:
+  Skills:
+  - breakblock @targetblock{x=-1;blockignores=*wither_immune}
+  - breakblock @targetblock{x=1;blockignores=*wither_immune}
+  - breakblock @targetblock{y=1;blockignores=*wither_immune}
+  - breakblock @targetblock{y=-1;blockignores=*wither_immune}
+  # - breakblock @targetblock{;blockignores=*wither_immune}
+
+### Tunnel 3 ###
+see_tunnel_3:
+  Conditions:
+  - stringequals{val1="OBSIDIAN";val2=<trigger.raytrace>} castinstead see_tunnel_3_regular_obsidian
+  Skills:
+  - skill:see_tunnel_3_regular
+
+see_tunnel_3_regular:
+  Conditions:
+  - (pitch{p=-90to-45} || pitch{p=45to90}) orElseCast see_tunnel_3_vertical_router
+  Skills:
+  - breakblock @targetblock{x=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{x=1;z=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{x=1;z=-1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{x=-1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{x=-1;z=-1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{x=-1;z=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{z=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{z=-1;blockignores=obsidian,*wither_immune}
+  # - breakblock @targetblock{blockignores=obsidian,*wither_immune}
+
+see_tunnel_3_vertical_router:
+  Conditions:
+  - (yaw{clamp=false;yaw=45to135} || yaw{clamp=false;yaw=-135to-45}) castinstead see_tunnel_3_vertical_ew
+  - (yaw{clamp=false;yaw=-45to45} || yaw{clamp=false;yaw=135to180} || yaw{clamp=false;yaw=-180to-135}) castinstead see_tunnel_3_vertical_ns
+
+see_tunnel_3_vertical_ew:
+  Skills:
+  - breakblock @targetblock{z=-1;y=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{z=-1;y=-1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{z=-1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{z=1;y=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{z=1;y=-1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{z=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{y=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{y=-1;blockignores=obsidian,*wither_immune}
+  # - breakblock @targetblock{;blockignores=obsidian,*wither_immune}
+
+see_tunnel_3_vertical_ns:
+  Skills:
+  - breakblock @targetblock{x=-1;y=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{x=-1;y=-1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{x=-1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{x=1;y=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{x=1;y=-1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{x=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{y=1;blockignores=obsidian,*wither_immune}
+  - breakblock @targetblock{y=-1;blockignores=obsidian,*wither_immune}
+  # - breakblock @targetblock{;blockignores=obsidian,*wither_immune}
+
+see_tunnel_3_regular_obsidian:
+  Conditions:
+  - (pitch{p=-90to-45} || pitch{p=45to90}) orElseCast see_tunnel_3_vertical_router_obsidian
+  Skills:
+  - breakblock @targetblock{x=1;blockignores=*wither_immune}
+  - breakblock @targetblock{x=1;z=1;blockignores=*wither_immune}
+  - breakblock @targetblock{x=1;z=-1;blockignores=*wither_immune}
+  - breakblock @targetblock{x=-1;blockignores=*wither_immune}
+  - breakblock @targetblock{x=-1;z=-1;blockignores=*wither_immune}
+  - breakblock @targetblock{x=-1;z=1;blockignores=*wither_immune}
+  - breakblock @targetblock{z=1;blockignores=*wither_immune}
+  - breakblock @targetblock{z=-1;blockignores=*wither_immune}
+  # - breakblock @targetblock{blockignores=*wither_immune}
+
+see_tunnel_3_vertical_router_obsidian:
+  Conditions:
+  - (yaw{clamp=false;yaw=45to135} || yaw{clamp=false;yaw=-135to-45}) castinstead see_tunnel_3_vertical_ew_obsidian
+  - (yaw{clamp=false;yaw=-45to45} || yaw{clamp=false;yaw=135to180} || yaw{clamp=false;yaw=-180to-135}) castinstead see_tunnel_3_vertical_ns_obsidian
+
+see_tunnel_3_vertical_ew_obsidian:
+  Skills:
+  - breakblock @targetblock{z=-1;y=1;blockignores=*wither_immune}
+  - breakblock @targetblock{z=-1;y=-1;blockignores=*wither_immune}
+  - breakblock @targetblock{z=-1;blockignores=*wither_immune}
+  - breakblock @targetblock{z=1;y=1;blockignores=*wither_immune}
+  - breakblock @targetblock{z=1;y=-1;blockignores=*wither_immune}
+  - breakblock @targetblock{z=1;blockignores=*wither_immune}
+  - breakblock @targetblock{y=1;blockignores=*wither_immune}
+  - breakblock @targetblock{y=-1;blockignores=*wither_immune}
+  # - breakblock @targetblock{;blockignores=*wither_immune}
+
+see_tunnel_3_vertical_ns_obsidian:
+  Skills:
+  - breakblock @targetblock{x=-1;y=1;blockignores=*wither_immune}
+  - breakblock @targetblock{x=-1;y=-1;blockignores=*wither_immune}
+  - breakblock @targetblock{x=-1;blockignores=*wither_immune}
+  - breakblock @targetblock{x=1;y=1;blockignores=*wither_immune}
+  - breakblock @targetblock{x=1;y=-1;blockignores=*wither_immune}
+  - breakblock @targetblock{x=1;blockignores=*wither_immune}
+  - breakblock @targetblock{y=1;blockignores=*wither_immune}
+  - breakblock @targetblock{y=-1;blockignores=*wither_immune}
+  # - breakblock @targetblock{;blockignores=*wither_immune}

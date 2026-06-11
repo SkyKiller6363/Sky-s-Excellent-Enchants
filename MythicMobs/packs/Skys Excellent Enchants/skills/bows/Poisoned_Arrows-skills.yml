@@ -1,0 +1,30 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see_poisoned_arrows:
+  TriggerConditions:
+  - (isPlayer || isLiving)
+  Skills:
+  - potion{type=POISON;l=<math.enchant_level-1>;duration=<math.enchant_level*20+20>} @trigger
+  - particle{particle=entity_effect;color=#39ff14;a=25;hs=0.35;vs=0.45;speed=0.04} @triggerlocation{y=1}
+  - particle{particle=spore_blossom_air;a=15;hs=0.4;vs=0.45;speed=0.02} @triggerlocation{y=1}
+  - sound{s=entity.spider.hurt;p=0.6;v=0.5;r=8} @triggerlocation
+

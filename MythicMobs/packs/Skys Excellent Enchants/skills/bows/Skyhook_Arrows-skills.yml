@@ -1,0 +1,28 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see_skyhook_arrows:
+  Skills:
+  - velocity{relative=true;velocityx=0;velocityz=0;velocityy=<math.enchant_level*0.25+0.45>;mode=ADD}
+  - potion{type=SLOW_FALLING;l=0;duration=<math.enchant_level*20+30>;p=false;i=false}
+  - damage{a=<math.enchant_level>;ii=true;pi=true;damagecause=MAGIC}
+  - particle{p=cloud;a=30;hs=0.45;vs=0.8} @triggerlocation
+  - sound{s=entity.phantom.flap;p=1.2;v=1.3} @triggerlocation

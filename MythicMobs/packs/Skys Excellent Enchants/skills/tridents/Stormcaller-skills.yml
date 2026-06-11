@@ -1,0 +1,43 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see_stormcaller:
+  Cooldown: 5
+  TriggerConditions:
+  - (isPlayer || isLiving)
+  Conditions:
+  - chance{c=<math.enchant_level*0.06+0.10>}
+  Skills:
+  - effect:lightning @trigger
+  - damage{a=<math.enchant_level*2+2>;pi=true;ii=true;damagecause=LIGHTNING} @trigger
+  - particle{p=electric_spark;a=35;hs=0.5;vs=0.9} @trigger
+  - sound{s=entity.lightning_bolt.thunder;p=1.4;v=0.8} @self
+
+see_stormcaller_melee:
+  Cooldown: 5
+  TriggerConditions:
+  - (isPlayer || isLiving)
+  Conditions:
+  - chance{c=<math.enchant_level*0.04+0.06>}
+  Skills:
+  - effect:lightning @trigger
+  - damage{a=<math.enchant_level+2>;pi=true;ii=true;damagecause=LIGHTNING} @trigger
+  - particle{p=electric_spark;a=20;hs=0.4;vs=0.7} @trigger

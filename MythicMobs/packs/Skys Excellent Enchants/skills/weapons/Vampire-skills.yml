@@ -1,0 +1,42 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+# Formula notes:
+# Level 1 = 50% of damage converted
+# Level 2 = 66% of damage converted
+# Level 3 = 83% of damage converted
+
+see_vampire: 
+  Cooldown: 4
+  Conditions:
+    - chance{c=<math.enchant_level*0.03+0.15>}
+  TriggerConditions:
+    - (isPlayer || isLiving)
+  Skills: #The math here is basically... Level 1 is 50% consume. Level 2 is 66% and Level 3 and 83% consume based on original damage amount. 
+    - consume{d=0;h=<math.round(damage/3*(1+(enchant_level*0.5)))>} @trigger
+    - particle{p=heart;a=10;hs=0.5;vs=0.5} 
+
+    - actionmessage{repeat=1;repeatI=10;m="<#f32a23>Vampire <gray>healed for <#ba0404><math.round(damage/3*(1+(enchant_level*0.5))/2)> ❤"} ?varisset{var=caster.enchant_action_message}
+    - sound{s=block.chain.break;p=1.5;v=2;audience=caster} @self ?varisset{var=caster.enchant_action_message}
+
+
+
+

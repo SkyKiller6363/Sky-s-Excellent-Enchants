@@ -1,0 +1,33 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see_echo_strike:
+  Cooldown: 4
+  TriggerConditions:
+  - (isPlayer || isLiving)
+  Conditions:
+  - chance{c=<math.enchant_level*0.05+0.10>}
+  Skills:
+  - particle{p=sonic_boom;a=1;hs=0;vs=0} @trigger
+  - delay 12
+  - damage{a=<math.damage*(0.20+(enchant_level*0.10))>;ii=true;pi=true;damagecause=MAGIC}
+  - particle{p=enchanted_hit;a=20;hs=0.5;vs=0.6} @trigger
+  - sound{s=entity.warden.sonic_boom;p=1.6;v=0.7} @self

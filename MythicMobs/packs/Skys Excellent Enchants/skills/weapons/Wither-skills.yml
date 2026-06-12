@@ -26,6 +26,6 @@ see_wither:
   Skills:
     - potion{type=WITHER;l=<math.enchant_level-1>;duration=<math.enchant_level*20+30>}
 
-    - am{m=<#42a500>venom} @self ?varisset{var=caster.enchant_action_message}
+    - am{m=<#1a1b1a>Wither} @self ?varisset{var=caster.enchant_action_message}
     - sound{s=entity.experience_orb.pickup;v=0.6;p=1.4;audience=caster} @self ?varisset{var=caster.enchant_action_message}
 

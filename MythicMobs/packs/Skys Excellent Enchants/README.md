@@ -2,12 +2,12 @@
 
 A table of all enchantments included in the pack, organized by enchantment type.
 
-**Total Enchantments:** 107
+**Total Enchantments:** 106
 
 **Column notes:**
 
 - **Primary Items** = items/tags that can receive the enchantment directly from the enchanting table.
-- **Secondary Items** = supported items/tags for the enchantment, such as applying it from an enchanted book in an anvil.
+- **Secondary Items** = supported items/tags for the enchantment outside of the direct enchanting table offer, such as applying it from an enchanted book in an anvil.
 - **Weight** = the enchantment table weight. A dash means the enchantment has no direct enchanting-table offer configured.
 
 ---
@@ -20,11 +20,11 @@ A table of all enchantments included in the pack, organized by enchantment type.
 | Bane of Netherspawn | Increased Damage to Nether Mobs | 5 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | Sharpness<br>Smite<br>Villager Defense | 10 |
 | Blindness | Applies Blindness to the target | 3 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 4 |
 | Confusion | Applies Nauseau to the target | 4 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 10 |
-| Cure | Cure Zombie Villagers and other Zombified mobs | 3 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 4 |
+| Cure | Cure Zombie Villagers and other Zombified mobs | 3 | Melee Weapons (swords, spears) | Sharp Weapons (swords, spears, axes) | — | 4 |
 | Curse of Death | If you kill a player, you have a chance of dying too. | 3 | — | Weapons (swords, spears, axes, maces) | — | — |
-| Decapitator | Chance to drop the mobs head on kill | 5 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 2 |
-| Duelist | Increases attack speed and grants a chance to disorient targets in close combat | 3 | Swords (note: tag is not in the provided vanilla tag list; likely meant `#minecraft:swords` or `#minecraft:enchantable/sweeping`) | Swords (note: tag is not in the provided vanilla tag list; likely meant `#minecraft:swords` or `#minecraft:enchantable/sweeping`) | — | 4 |
-| Echo Strike | Your hits can echo for delayed magic damage | 3 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 3 |
+| Decapitator | Chance to drop the mobs head on kill | 5 | Melee Weapons (swords, spears) | Sharp Weapons (swords, spears, axes) | — | 2 |
+| Duelist | Increases attack speed and grants a chance to disorient targets in close combat | 3 | Swords | Sharp Weapons (swords, spears, axes) | — | 4 |
+| Echo Strike | Your hits can echo for delayed magic damage | 3 | Melee Weapons (swords, spears) | Sharp Weapons (swords, spears, axes) | — | 3 |
 | Enderslayer | Increased damage to Enderman, Ender Dragons, and Shulkers | 5 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | Sharpness<br>Smite<br>Bane of Netherspawn<br>Villager Defense | 3 |
 | Exhaust | Applies Hunger to the target | 4 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 5 |
 | Glass Cannon | Greatly increases attack damage while reducing max health when held | 3 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 2 |
@@ -32,11 +32,11 @@ A table of all enchantments included in the pack, organized by enchantment type.
 | Magma Rend | Rips through enemies with burning magma | 3 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | Fire Aspect | 4 |
 | Paralyze | Applies Mining Fatigue to the target | 5 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 5 |
 | Rage | Applies Strength to the wielder | 2 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 5 |
-| Rocket | Sends your target away on a rocket | 3 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 5 |
+| Rocket | Sends your target away on a rocket | 3 | Melee Weapons (swords, spears) | Sharp Weapons (swords, spears, axes) | — | 5 |
 | Rocky | Chance to drop Cobblestone on hit | 3 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 4 |
 | Soul Barrage | Kills can release a barrage of soul bursts around the victim | 3 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 2 |
 | Soul Reaper | Kills briefly empower and heal you | 3 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 2 |
-| Swiper | Steals players XP | 3 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 2 |
+| Swiper | Steals players XP | 3 | Melee Weapons (swords, spears) | Sharp Weapons (swords, spears, axes) | — | 2 |
 | Temper | Does more damage the lower health you have | 5 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 2 |
 | Thrifty | Chance to drop the mobs spawn egg on kill | 5 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 2 |
 | Thunder | Strikes the target with Lightning | 5 | Melee Weapons (swords, spears) | Weapons (swords, spears, axes, maces) | — | 5 |
@@ -53,14 +53,14 @@ A table of all enchantments included in the pack, organized by enchantment type.
 | Enchantment | Description | Max Level | Primary Items | Secondary Items | Incompatible With | Weight |
 |---|---|---:|---|---|---|---:|
 | Block Reach | Increases Block Reach | 4 | Mining Tools (axes, pickaxes, shovels, hoes, shears) | Mining Tools (axes, pickaxes, shovels, hoes, shears) | — | 4 |
-| Excavator's Grip | Increases block reach and mining movement while holding a tool | 3 | Mining Tools (axes, pickaxes, shovels, hoes, shears) | Mining Tools (axes, pickaxes, shovels, hoes, shears) | — | 4 |
-| Green Thumb | Occasionally bone-meals crops when harvesting | 3 | Mining Tools (axes, pickaxes, shovels, hoes, shears) | Mining Tools (axes, pickaxes, shovels, hoes, shears) | — | 6 |
-| Haste | Applies Haste effect on equip | 3 | Mining Tools (axes, pickaxes, shovels, hoes, shears) | Mining Tools (axes, pickaxes, shovels, hoes, shears) | — | 4 |
-| Lucky Miner | Grants additional XP when mining ores | 3 | Mining Tools (axes, pickaxes, shovels, hoes, shears) | Mining Tools (axes, pickaxes, shovels, hoes, shears) | — | 4 |
-| MiniBlocks: Stone Blocks | Allows you to collect stone-related MiniBlocks from mining | 5 | Pickaxes | Pickaxes | — | 4 |
-| Silk Spawner | Allows you to pick up monster spawners | 1 | Pickaxes | Pickaxes | — | 4 |
-| Tunnel | Allows you to mine multiple blocks | 3 | Pickaxes | Pickaxes | — | 4 |
-| Veinminer | Mines the ore vein | 3 | Mining Tools (axes, pickaxes, shovels, hoes, shears) | Mining Tools (axes, pickaxes, shovels, hoes, shears) | — | 4 |
+| Excavator's Grip | Increases block reach and mining movement while holding a tool | 3 | Mining Tools (axes, pickaxes, shovels, hoes, shears) | — | — | 4 |
+| Green Thumb | Occasionally bone-meals crops when harvesting | 3 | Hoes | — | — | 6 |
+| Haste | Applies Haste effect on equip | 3 | Mining Tools (axes, pickaxes, shovels, hoes, shears) | — | — | 4 |
+| Lucky Miner | Grants additional XP when mining ores | 3 | Mining Tools (axes, pickaxes, shovels, hoes, shears) | — | — | 4 |
+| MiniBlocks: Stone Blocks | Allows you to collect stone-related MiniBlocks from mining | 5 | Pickaxes | — | — | 4 |
+| Silk Spawner | Allows you to pick up monster spawners | 1 | Pickaxes | — | — | 4 |
+| Tunnel | Allows you to mine multiple blocks | 3 | Pickaxes | — | — | 4 |
+| Veinminer | Mines the ore vein | 3 | Pickaxes | — | — | 4 |
 
 ---
 
@@ -105,21 +105,21 @@ A table of all enchantments included in the pack, organized by enchantment type.
 
 | Enchantment | Description | Max Level | Primary Items | Secondary Items | Incompatible With | Weight |
 |---|---|---:|---|---|---|---:|
-| Bomber | Chance to shoot primed TNT | 3 | Bows | Bows | Infinity<br>Dragonfire Arrows<br>Ender Bow<br>Ghast<br>Confusing Arrows<br>Darkness Arrows<br>Electrified Arrows<br>Explosive Arrows<br>Hover<br>Poisoned Arrows<br>Sniper<br>Vampiric Arrows<br>Withered Arrows | 2 |
-| Confusing Arrows | Applies Nauseau to the target | 3 | Bows | Bows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 4 |
-| Darkness Arrows | Applies Darkness to the target | 3 | Bows | Bows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 4 |
-| Dragonfire Arrows | Applies Dragon''s Breath on arrow hit and landing | 3 | Bows | Bows | Infinity<br>Power<br>Punch<br>Flame<br>Bomber<br>Ender Bow<br>Ghast<br>Confusing Arrows<br>Darkness Arrows<br>Electrified Arrows<br>Explosive Arrows<br>Hover<br>Poisoned Arrows<br>Sniper<br>Vampiric Arrows<br>Withered Arrows | 3 |
-| Electrified Arrows | Strikes the target with lightning | 3 | Bows | Bows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 4 |
-| Ender Bow | Shoots an Enderpearl | 1 | Bows | Bows | Infinity<br>Power<br>Punch<br>Flame<br>Bomber<br>Dragonfire Arrows<br>Ghast<br>Confusing Arrows<br>Darkness Arrows<br>Electrified Arrows<br>Explosive Arrows<br>Hover<br>Poisoned Arrows<br>Sniper<br>Vampiric Arrows<br>Withered Arrows | 1 |
-| Explosive Arrows | Explodes on arrow hit | 5 | Bows | Bows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 4 |
-| Frost Arrows | Freezes and slows targets hit by arrows | 3 | Bows | Bows | — | 4 |
-| Ghast | Arrows turn into ghast fireballs | 3 | Bows<br>Crossbows | Bows | Infinity<br>Power<br>Punch<br>Flame<br>Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Confusing Arrows<br>Darkness Arrows<br>Electrified Arrows<br>Explosive Arrows<br>Hover<br>Poisoned Arrows<br>Sniper<br>Vampiric Arrows<br>Withered Arrows | 1 |
-| Hover | Applies Levitation to the target | 3 | Bows | Bows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 4 |
-| Poisoned Arrows | Applies Poison on arrow hit | 3 | Bows | Bows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast<br>Withered Arrows | 4 |
-| Skyhook Arrows | Arrows yank enemies upward with a burst of wind | 3 | Bows | Bows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 3 |
-| Sniper | Increases Arrow Velocity | 5 | Bows | Bows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 4 |
-| Vampiric Arrows | Restores health on arrow hit | 3 | Bows | Bows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 3 |
-| Withered Arrows | Applies Wither on arrow hit | 3 | Bows | Bows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast<br>Poisoned Arrows | 3 |
+| Bomber | Chance to shoot primed TNT | 3 | Bows | — | Infinity<br>Dragonfire Arrows<br>Ender Bow<br>Ghast<br>Confusing Arrows<br>Darkness Arrows<br>Electrified Arrows<br>Explosive Arrows<br>Hover<br>Poisoned Arrows<br>Sniper<br>Vampiric Arrows<br>Withered Arrows | 2 |
+| Confusing Arrows | Applies Nauseau to the target | 3 | Bows | Bows<br>Crossbows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 4 |
+| Darkness Arrows | Applies Darkness to the target | 3 | Bows | Bows<br>Crossbows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 4 |
+| Dragonfire Arrows | Applies Dragon''s Breath on arrow hit and landing | 3 | Bows | — | Infinity<br>Power<br>Punch<br>Flame<br>Bomber<br>Ender Bow<br>Ghast<br>Confusing Arrows<br>Darkness Arrows<br>Electrified Arrows<br>Explosive Arrows<br>Hover<br>Poisoned Arrows<br>Sniper<br>Vampiric Arrows<br>Withered Arrows | 3 |
+| Electrified Arrows | Strikes the target with lightning | 3 | Bows | Bows<br>Crossbows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 4 |
+| Ender Bow | Shoots an Enderpearl | 1 | Bows | — | Infinity<br>Power<br>Punch<br>Flame<br>Bomber<br>Dragonfire Arrows<br>Ghast<br>Confusing Arrows<br>Darkness Arrows<br>Electrified Arrows<br>Explosive Arrows<br>Hover<br>Poisoned Arrows<br>Sniper<br>Vampiric Arrows<br>Withered Arrows | 1 |
+| Explosive Arrows | Explodes on arrow hit | 5 | Bows | Bows<br>Crossbows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 4 |
+| Frost Arrows | Freezes and slows targets hit by arrows | 3 | Bows | Bows<br>Crossbows | — | 4 |
+| Ghast | Arrows turn into ghast fireballs | 3 | Bows | — | Infinity<br>Power<br>Punch<br>Flame<br>Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Confusing Arrows<br>Darkness Arrows<br>Electrified Arrows<br>Explosive Arrows<br>Hover<br>Poisoned Arrows<br>Sniper<br>Vampiric Arrows<br>Withered Arrows | 1 |
+| Hover | Applies Levitation to the target | 3 | Bows | Bows<br>Crossbows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 4 |
+| Poisoned Arrows | Applies Poison on arrow hit | 3 | Bows | Bows<br>Crossbows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast<br>Withered Arrows | 4 |
+| Skyhook Arrows | Arrows yank enemies upward with a burst of wind | 3 | Bows | Bows<br>Crossbows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 3 |
+| Sniper | Increases Arrow Velocity | 5 | Bows | Bows<br>Crossbows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 4 |
+| Vampiric Arrows | Restores health on arrow hit | 3 | Bows | Bows<br>Crossbows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast | 3 |
+| Withered Arrows | Applies Wither on arrow hit | 3 | Bows | Bows<br>Crossbows | Bomber<br>Dragonfire Arrows<br>Ender Bow<br>Ghast<br>Poisoned Arrows | 3 |
 
 ---
 
@@ -127,34 +127,33 @@ A table of all enchantments included in the pack, organized by enchantment type.
 
 | Enchantment | Description | Max Level | Primary Items | Secondary Items | Incompatible With | Weight |
 |---|---|---:|---|---|---|---:|
-| Abyssal Current | Trident strikes can drag enemies down with crushing water pressure | 3 | Tridents | Tridents | — | 4 |
-| Cyclone | Trident hits can burst into a spinning knockback wave | 3 | Tridents | Tridents | — | 3 |
-| Infernus | Triedents set targets on fire | 3 | Tridents | Tridents | — | 5 |
-| Riptide Reach | Increases trident reach and surges targets with ocean force | 3 | Tridents | Tridents | — | 4 |
-| Stormcaller | Thrown tridents can call down lightning on impact | 3 | Tridents | Tridents | — | 3 |
+| Abyssal Current | Trident strikes can drag enemies down with crushing water pressure | 3 | Tridents | — | — | 4 |
+| Cyclone | Trident hits can burst into a spinning knockback wave | 3 | Tridents | — | — | 3 |
+| Infernus | Triedents set targets on fire | 3 | Tridents | — | — | 5 |
+| Riptide Reach | Increases trident reach and surges targets with ocean force | 3 | Tridents | — | — | 4 |
+| Stormcaller | Thrown tridents can call down lightning on impact | 3 | Tridents | — | — | 3 |
 
 ---
 
-## Fishing Rod Enchantments (16)
+## Fishing Rod Enchantments (15)
 
 | Enchantment | Description | Max Level | Primary Items | Secondary Items | Incompatible With | Weight |
 |---|---|---:|---|---|---|---:|
-| Anchor Hook | Hooked enemies receive Slowness | 3 | Fishing Rods |  | — | 4 |
-| Barbed Hook | Chance to make hooked enemies bleed | 3 | Fishing Rods |  | — | 4 |
-| Curse Of Drowned | Has a chance to fish up a Drowned | 3 | Fishing Rods |  | — | 4 |
-| Deep Lure | Failed casts can stir the deep, pulling in bonus fish or trouble | 3 | Fishing Rods |  | — | 4 |
-| Flame Hook | Hooked enemies are ignited | 2 | Fishing Rods |  | — | 4 |
-| Frost Hook | Chance to Freeze and Slow hooked enemies | 3 | Fishing Rods |  | — | 4 |
-| Grappling Hook | Pulls you towards the hooked enemy when you pull | 1 | Fishing Rods |  | — | 4 |
-| Heavy Hook | Chance to apply Slowness and Mining Fatigue to the hooked enemy | 3 | Fishing Rods |  | — | 4 |
-| Salvage Hook | Failed fishing attempts can salvage useful junk and XP | 3 | Fishing Rods |  | — | 5 |
-| Sharpness Hook | Living entities take damage when hooked | 5 | Fishing Rods |  | — | 4 |
-| Siphon Hook | Chance to heal partial damage dealt to hooked enemy | 3 | Fishing Rods |  | — | 4 |
-| Thunder Hook | Chance to electrocute the hooked enemy with Lightning | 3 | Fishing Rods |  | — | 4 |
-| Treasure Current | The current can wash rare ocean loot to your failed casts | 3 | Fishing Rods |  | — | 2 |
-| Venom Hook | Chance to Poison hooked enemies | 3 | Fishing Rods |  | — | 4 |
-| Weakness Hook | Chance to apply Weakness to hooked enemies | 3 | Fishing Rods |  | — | 4 |
-| Wither Hook | Chance to Wither hooked enemies | 2 | Fishing Rods |  | — | 4 |
+| Barbed Hook | Chance to make hooked enemies bleed | 3 | Fishing Rods | — | — | 4 |
+| Curse Of Drowned | Has a chance to fish up a Drowned | 3 | Fishing Rods | — | — | 4 |
+| Deep Lure | Failed casts can stir the deep, pulling in bonus fish or trouble | 3 | Fishing Rods | — | — | 4 |
+| Flame Hook | Hooked enemies are ignited | 2 | Fishing Rods | — | — | 4 |
+| Frost Hook | Chance to Freeze and Slow hooked enemies | 3 | Fishing Rods | — | — | 4 |
+| Grappling Hook | Pulls you towards the hooked enemy when you pull | 1 | Fishing Rods | — | — | 4 |
+| Heavy Hook | Chance to apply Slowness and Mining Fatigue to the hooked enemy | 3 | Fishing Rods | — | — | 4 |
+| Salvage Hook | Failed fishing attempts can salvage useful junk and XP | 3 | Fishing Rods | — | — | 5 |
+| Sharpness Hook | Living entities take damage when hooked | 5 | Fishing Rods | — | — | 4 |
+| Siphon Hook | Chance to heal partial damage dealt to hooked enemy | 3 | Fishing Rods | — | — | 4 |
+| Thunder Hook | Chance to electrocute the hooked enemy with Lightning | 3 | Fishing Rods | — | — | 4 |
+| Treasure Current | The current can wash rare ocean loot to your failed casts | 3 | Fishing Rods | — | — | 2 |
+| Venom Hook | Chance to Poison hooked enemies | 3 | Fishing Rods | — | Wither Hook | 4 |
+| Weakness Hook | Chance to apply Weakness to hooked enemies | 3 | Fishing Rods | — | — | 4 |
+| Wither Hook | Chance to Wither hooked enemies | 2 | Fishing Rods | — | Venom Hook | 4 |
 
 ---
 

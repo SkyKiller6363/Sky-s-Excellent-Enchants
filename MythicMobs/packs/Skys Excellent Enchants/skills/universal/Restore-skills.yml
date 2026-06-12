@@ -1,0 +1,31 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see_restore:
+  Conditions:
+    - itemdurability{value=<10}
+  Skills:
+    - reducedurability{a=-<math.enchant_level*25>;p=true}
+    - am{m="<#ff0000>Restore Activated";repeat=2;repeatI=5}
+    - enchant{e=see:restore;mode=REMOVE;level=1}
+    - particle{particle=small_flame;a=30;speed=0.1;hs=0.5;y=1;vs=0.5} 
+    - sound{s=item.firecharge.use;p=1.5;v=0.5}
+

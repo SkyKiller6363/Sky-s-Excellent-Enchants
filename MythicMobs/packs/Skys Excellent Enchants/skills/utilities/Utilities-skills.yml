@@ -1,0 +1,35 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+toggle_enchant_action_message:
+  Command:
+    Id: toggleactionmessage
+  Conditions:
+  - haspermission{p=skycommands.toggle_enchant_action_message}
+  - varisset{var=caster.enchant_action_message} castInstead toggle_enchant_action_message-remove
+  Skills:
+  - setvar{var=caster.enchant_action_message;val=1;save=true} @self
+  - message{m="<gray><b>[</b><gradient:#2cff1d:#12abb0>Sky Enchants<gray><b>]</b> <#54fc54>Toggled Action Messages to <#54fcfc>On"} @self
+
+toggle_enchant_action_message-remove:
+  Skills:
+  - unsetvar{var=caster.enchant_action_message} @self
+  - message{m="<gray><b>[</b><gradient:#2cff1d:#12abb0>Sky Enchants<gray><b>]</b> <#54fc54>Toggled Action Messages to <#54fcfc>Off"} @self

@@ -1,0 +1,530 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                    Sky's Decapitator Enchantment                   ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)           │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A Decapitator Enchantment! When you kill a mob,     ██
+#   ██   there's a chance its head will drop! This is for every mob       ██
+#   ██   in the game! How Fun!                                            ██
+#   ██                                                                    ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see_decapitator_mob:
+  Conditions:
+  - haspack{pack=Decapitator_Variants} castInstead decapitator_mob_variant
+  Skills:
+  - skill{s=see_decapitator_mob_base}
+
+see_decapitator_mob_base:
+  Conditions:
+  - hasenchant{enchantment=looting;level=3} castInstead see_decapitator_mob-looting3
+  - hasenchant{enchantment=looting;level=2} castInstead see_decapitator_mob-looting2
+  - hasenchant{enchantment=looting;level=1} castInstead see_decapitator_mob-looting1
+  - chance{c=<math.enchant_level*0.01>}
+  Skills:
+  - skill{s=see_decapitator_mob-mob_drop}
+
+see_decapitator_mob-looting1:
+  Conditions:
+  - chance{c=<math.enchant_level*0.01+0.015>}
+  Skills:
+  - skill{s=see_decapitator_mob-mob_drop}
+see_decapitator_mob-looting2:
+  Conditions:
+  - chance{c=<math.enchant_level*0.01+0.025>}
+  Skills:
+  - skill{s=see_decapitator_mob-mob_drop}
+see_decapitator_mob-looting3:
+  Conditions:
+  - chance{c=<math.enchant_level*0.01+0.035>}
+  Skills:
+  - skill{s=see_decapitator_mob-mob_drop}
+
+
+see_decapitator_player:
+  Skills:
+  - decapitate
+
+see_decapitator_effects:
+  Skills:
+  - sudo{skill=[ - hide{d=600} @server ]}
+  - delay 1
+  - sudo{skill=[ - showentity @trigger ];cat=true}
+  - aura{duration=600;name=decapeffect;i=5;
+    ontick=[ - particles{particle=happy_villager;amount=2;hS=0.1;vS=0.1;audience=caster} ];
+    components=[ - glow{color=RED} ]}
+  - sudo{skill=[ - jump{v=0.5;repeat=12;repeatI=50}]}
+
+  - sound{s=entity.experience_orb.pickup;v=0.6;p=1.4;audience=caster}
+
+
+see_decapitator_mob-mob_drop:
+  TriggerConditions:
+  - entitytype{type=ALLAY} castInstead see_decapitator_mob-allay
+  - entitytype{type=ARMADILLO} castInstead see_decapitator_mob-armadillo
+  - entitytype{type=AXOLOTL} castInstead see_decapitator_mob-axolotl
+  - entitytype{type=BAT} castInstead see_decapitator_mob-bat
+  - entitytype{type=BEE} castInstead see_decapitator_mob-bee
+  - entitytype{type=BLAZE} castInstead see_decapitator_mob-blaze
+  - entitytype{type=BOGGED} castInstead see_decapitator_mob-bogged
+  - entitytype{type=BREEZE} castInstead see_decapitator_mob-breeze
+  - entitytype{type=CAMEL_HUSK} castInstead see_decapitator_mob-camel_husk
+  - entitytype{type=CAMEL} castInstead see_decapitator_mob-camel
+  - entitytype{type=CAT} castInstead see_decapitator_mob-cat
+  - entitytype{type=CAVE_SPIDER} castInstead see_decapitator_mob-cave_spider
+  - entitytype{type=CHICKEN} castInstead see_decapitator_mob-chicken
+  - entitytype{type=COD} castInstead see_decapitator_mob-cod
+  - entitytype{type=COPPER_GOLEM} castInstead see_decapitator_mob-copper_golem
+  - entitytype{type=COW} castInstead see_decapitator_mob-cow
+  - entitytype{type=CREAKING} castInstead see_decapitator_mob-creaking
+  - entitytype{type=CREEPER} castInstead see_decapitator_mob-creeper
+  - entitytype{type=DOLPHIN} castInstead see_decapitator_mob-dolphin
+  - entitytype{type=DONKEY} castInstead see_decapitator_mob-donkey
+  - entitytype{type=DROWNED} castInstead see_decapitator_mob-drowned
+  - entitytype{type=ELDER_GUARDIAN} castInstead see_decapitator_mob-elder_guardian
+  - entitytype{type=ENDERMAN} castInstead see_decapitator_mob-enderman
+  - entitytype{type=ENDER_DRAGON} castInstead see_decapitator_mob-ender_dragon
+  - entitytype{type=ENDERMITE} castInstead see_decapitator_mob-endermite
+  - entitytype{type=EVOKER} castInstead see_decapitator_mob-evoker
+  - entitytype{type=FOX} castInstead see_decapitator_mob-fox
+  - entitytype{type=FROG{variant=COLD}} castInstead see_decapitator_mob-frog_cold
+  - entitytype{type=FROG{variant=TEMPERATE}} castInstead see_decapitator_mob-frog_temperate
+  - entitytype{type=FROG{variant=WARM}} castInstead see_decapitator_mob-frog_warm
+  - entitytype{type=GHAST} castInstead see_decapitator_mob-ghast
+  - entitytype{type=GLOW_SQUID} castInstead see_decapitator_mob-glow_squid
+  - entitytype{type=GOAT} castInstead see_decapitator_mob-goat
+  - entitytype{type=GUARDIAN} castInstead see_decapitator_mob-guardian
+  - entitytype{type=HAPPY_GHAST} castInstead see_decapitator_mob-happy_ghast
+  - entitytype{type=HOGLIN} castInstead see_decapitator_mob-hoglin
+  - entitytype{type=HORSE} castInstead see_decapitator_mob-horse
+  - entitytype{type=HUSK} castInstead see_decapitator_mob-husk
+  - entitytype{type=ILLUSIONER} castInstead see_decapitator_mob-illusioner
+  - entitytype{type=IRON_GOLEM} castInstead see_decapitator_mob-iron_golem
+  - entitytype{type=LLAMA} castInstead see_decapitator_mob-llama
+  - entitytype{type=MAGMA_CUBE} castInstead see_decapitator_mob-magma_cube
+  - entitytype{type=MULE} castInstead see_decapitator_mob-mule
+  - entitytype{type=MOOSHROOM{variant=BROWN}} castInstead see_decapitator_mob-mushroom_cow_brown
+  - entitytype{type=MOOSHROOM{variant=RED}} castInstead see_decapitator_mob-mushroom_cow_red
+  - entitytype{type=NAUTILUS} castInstead see_decapitator_mob-nautilus
+  - entitytype{type=OCELOT} castInstead see_decapitator_mob-ocelot
+  - entitytype{type=PANDA} castInstead see_decapitator_mob-panda_normal
+  - entitytype{type=PARCHED} castInstead see_decapitator_mob-parched
+  - entitytype{type=PARROT} castInstead see_decapitator_mob-parrot
+  - entitytype{type=PHANTOM} castInstead see_decapitator_mob-phantom
+  - entitytype{type=PIGLIN_BRUTE} castInstead see_decapitator_mob-piglin_brute
+  - entitytype{type=PIGLIN} castInstead see_decapitator_mob-piglin
+  - entitytype{type=PIG} castInstead see_decapitator_mob-pig_temperate
+  - entitytype{type=PILLAGER} castInstead see_decapitator_mob-pillager
+  - entitytype{type=POLAR_BEAR} castInstead see_decapitator_mob-polar_bear
+  - entitytype{type=PUFFERFISH} castInstead see_decapitator_mob-pufferfish
+  - entitytype{type=RABBIT} castInstead see_decapitator_mob-rabbit
+  - entitytype{type=RAVAGER} castInstead see_decapitator_mob-ravager
+  - entitytype{type=SALMON} castInstead see_decapitator_mob-salmon
+  - entitytype{type=SHEEP} castInstead see_decapitator_mob-sheep
+  - entitytype{type=SHULKER} castInstead see_decapitator_mob-shulker
+  - entitytype{type=SILVERFISH} castInstead see_decapitator_mob-silverfish
+  - entitytype{type=SKELETON_HORSE} castInstead see_decapitator_mob-skeleton_horse
+  - entitytype{type=SKELETON} castInstead see_decapitator_mob-skeleton
+  - entitytype{type=SLIME} castInstead see_decapitator_mob-slime
+  - entitytype{type=SNIFFER} castInstead see_decapitator_mob-sniffer
+  - entitytype{type=SNOW_GOLEM} castInstead see_decapitator_mob-snowman
+  - entitytype{type=SPIDER} castInstead see_decapitator_mob-spider
+  - entitytype{type=SQUID} castInstead see_decapitator_mob-squid
+  - entitytype{type=STRAY} castInstead see_decapitator_mob-stray
+  - entitytype{type=STRIDER} castInstead see_decapitator_mob-strider
+  - entitytype{type=TADPOLE} castInstead see_decapitator_mob-tadpole
+  - entitytype{type=TRADER_LLAMA} castInstead see_decapitator_mob-trader_llama
+  - entitytype{type=TROPICAL_FISH} castInstead see_decapitator_mob-tropical_fish
+  - entitytype{type=TURTLE} castInstead see_decapitator_mob-turtle
+  - entitytype{type=VEX} castInstead see_decapitator_mob-vex
+  - entitytype{type=VILLAGER} castInstead see_decapitator_mob-villager
+  - entitytype{type=VINDICATOR} castInstead see_decapitator_mob-vindicator
+  - entitytype{type=WANDERING_TRADER} castInstead see_decapitator_mob-wandering_trader
+  - entitytype{type=WARDEN} castInstead see_decapitator_mob-warden
+  - entitytype{type=WITCH} castInstead see_decapitator_mob-witch
+  - entitytype{type=WITHER_SKELETON} castInstead see_decapitator_mob-wither_skeleton
+  - entitytype{type=WITHER} castInstead see_decapitator_mob-wither
+  - entitytype{type=WOLF} castInstead see_decapitator_mob-wolf_pale
+  - entitytype{type=ZOGLIN} castInstead see_decapitator_mob-zoglin
+  - entitytype{type=ZOMBIE_HORSE} castInstead see_decapitator_mob-zombie_horse
+  - entitytype{type=ZOMBIE_NAUTILUS} castInstead see_decapitator_mob-zombie_nautilus
+  - entitytype{type=ZOMBIE_VILLAGER} castInstead see_decapitator_mob-zombie_villager
+  - entitytype{type=ZOMBIE} castInstead see_decapitator_mob-zombie
+  - entitytype{type=ZOMBIFIED_PIGLIN} castInstead see_decapitator_mob-zombified_piglin
+  # Skills:
+see_decapitator_mob-allay:
+  Skills:
+  - dropitem{item=see_decapitator_allay;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-armadillo:
+  Skills:
+  - dropitem{item=see_decapitator_armadillo;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-axolotl:
+  Skills:
+  - dropitem{item=see_decapitator_axolotl;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-bat:
+  Skills:
+  - dropitem{item=see_decapitator_bat;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-bee:
+  Skills:
+  - dropitem{item=see_decapitator_bee;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-blaze:
+  Skills:
+  - dropitem{item=see_decapitator_blaze;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-bogged:
+  Skills:
+  - dropitem{item=see_decapitator_bogged;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-breeze:
+  Skills:
+  - dropitem{item=see_decapitator_breeze;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-camel_husk:
+  Skills:
+  - dropitem{item=see_decapitator_camel_husk;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-camel:
+  Skills:
+  - dropitem{item=see_decapitator_camel;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-cat:
+  Skills:
+  - dropitem{item=see_decapitator_cat;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-cave_spider:
+  Skills:
+  - dropitem{item=see_decapitator_cave_spider;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-chicken:
+  Skills:
+  - dropitem{item=see_decapitator_chicken_temperate;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-cod:
+  Skills:
+  - dropitem{item=see_decapitator_cod;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-copper_golem:
+  Skills:
+  - dropitem{item=see_decapitator_copper_golem;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-cow:
+  Skills:
+  - dropitem{item=see_decapitator_cow_temperate;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-creaking:
+  Skills:
+  - dropitem{item=see_decapitator_creaking;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-creeper:
+  Skills:
+  - dropitem{item=creeper_head;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-dolphin:
+  Skills:
+  - dropitem{item=see_decapitator_dolphin;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-donkey:
+  Skills:
+  - dropitem{item=see_decapitator_donkey;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-drowned:
+  Skills:
+  - dropitem{item=see_decapitator_drowned;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-elder_guardian:
+  Skills:
+  - dropitem{item=see_decapitator_elder_guardian;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-enderman:
+  Skills:
+  - dropitem{item=see_decapitator_enderman;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-ender_dragon:
+  Skills:
+  - dropitem{item=DRAGON_HEAD;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-endermite:
+  Skills:
+  - dropitem{item=see_decapitator_endermite;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-evoker:
+  Skills:
+  - dropitem{item=see_decapitator_evoker;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-fox:
+  Skills:
+  - dropitem{item=see_decapitator_fox;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-frog_cold:
+  Skills:
+  - dropitem{item=see_decapitator_frog_cold;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-frog_temperate:
+  Skills:
+  - dropitem{item=see_decapitator_frog_temperate;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-frog_warm:
+  Skills:
+  - dropitem{item=see_decapitator_frog_warm;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-ghast:
+  Skills:
+  - dropitem{item=see_decapitator_ghast;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-glow_squid:
+  Skills:
+  - dropitem{item=see_decapitator_glow_squid;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-goat:
+  Skills:
+  - dropitem{item=see_decapitator_goat;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-guardian:
+  Skills:
+  - dropitem{item=see_decapitator_guardian;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-happy_ghast:
+  Skills:
+  - dropitem{item=see_decapitator_happy_ghast;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-hoglin:
+  Skills:
+  - dropitem{item=see_decapitator_hoglin;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-horse:
+  Skills:
+  - dropitem{item=see_decapitator_horse;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-husk:
+  Skills:
+  - dropitem{item=see_decapitator_husk;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-illusioner:
+  Skills:
+  - dropitem{item=see_decapitator_illusioner;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-iron_golem:
+  Skills:
+  - dropitem{item=see_decapitator_iron_golem;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-llama:
+  Skills:
+  - dropitem{item=see_decapitator_llama;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-magma_cube:
+  Skills:
+  - dropitem{item=see_decapitator_magma_cube;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-mule:
+  Skills:
+  - dropitem{item=see_decapitator_mule;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-mushroom_cow_brown:
+  Skills:
+  - dropitem{item=see_decapitator_mushroom_cow_brown;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-mushroom_cow_red:
+  Skills:
+  - dropitem{item=see_decapitator_mushroom_cow_red;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-nautilus:
+  Skills:
+  - dropitem{item=see_decapitator_nautilus;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-ocelot:
+  Skills:
+  - dropitem{item=see_decapitator_ocelot;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-panda_normal:
+  Skills:
+  - dropitem{item=see_decapitator_panda_normal;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-parched:
+  Skills:
+  - dropitem{item=see_decapitator_parched;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-parrot:
+  Skills:
+  - dropitem{item=see_decapitator_parrot;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-phantom:
+  Skills:
+  - dropitem{item=see_decapitator_phantom;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-piglin_brute:
+  Skills:
+  - dropitem{item=see_decapitator_piglin_brute;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-piglin:
+  Skills:
+  - dropitem{item=piglin_head;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-pig_temperate:
+  Skills:
+  - dropitem{item=see_decapitator_pig_temperate;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-pillager:
+  Skills:
+  - dropitem{item=see_decapitator_pillager;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-polar_bear:
+  Skills:
+  - dropitem{item=see_decapitator_polar_bear;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-pufferfish:
+  Skills:
+  - dropitem{item=see_decapitator_pufferfish;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-rabbit:
+  Skills:
+  - dropitem{item=see_decapitator_rabbit;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-ravager:
+  Skills:
+  - dropitem{item=see_decapitator_ravager;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-salmon:
+  Skills:
+  - dropitem{item=see_decapitator_salmon;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-sheep:
+  Skills:
+  - dropitem{item=see_decapitator_sheep;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-shulker:
+  Skills:
+  - dropitem{item=see_decapitator_shulker;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-silverfish:
+  Skills:
+  - dropitem{item=see_decapitator_silverfish;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-skeleton_horse:
+  Skills:
+  - dropitem{item=see_decapitator_skeleton_horse;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-skeleton:
+  Skills:
+  - dropitem{item=skeleton_skull;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-slime:
+  Skills:
+  - dropitem{item=see_decapitator_slime;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-sniffer:
+  Skills:
+  - dropitem{item=see_decapitator_sniffer;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-snowman:
+  Skills:
+  - dropitem{item=see_decapitator_snowman;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-spider:
+  Skills:
+  - dropitem{item=see_decapitator_spider;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-squid:
+  Skills:
+  - dropitem{item=see_decapitator_squid;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-stray:
+  Skills:
+  - dropitem{item=see_decapitator_stray;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-strider:
+  Skills:
+  - dropitem{item=see_decapitator_strider;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-tadpole:
+  Skills:
+  - dropitem{item=see_decapitator_tadpole;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-trader_llama:
+  Skills:
+  - dropitem{item=see_decapitator_trader_llama;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-tropical_fish:
+  Skills:
+  - dropitem{item=see_decapitator_tropical_fish;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-turtle:
+  Skills:
+  - dropitem{item=see_decapitator_turtle;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-vex:
+  Skills:
+  - dropitem{item=see_decapitator_vex;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-villager:
+  Skills:
+  - dropitem{item=see_decapitator_villager;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-vindicator:
+  Skills:
+  - dropitem{item=see_decapitator_vindicator;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-wandering_trader:
+  Skills:
+  - dropitem{item=see_decapitator_wandering_trader;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-warden:
+  Skills:
+  - dropitem{item=see_decapitator_warden;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-witch:
+  Skills:
+  - dropitem{item=see_decapitator_witch;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-wither_skeleton:
+  Skills:
+  - dropitem{item=wither_skeleton_skull;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-wither:
+  Skills:
+  - dropitem{item=see_decapitator_wither;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-wolf_pale:
+  Skills:
+  - dropitem{item=see_decapitator_wolf_pale;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-zoglin:
+  Skills:
+  - dropitem{item=see_decapitator_zoglin;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-zombie_horse:
+  Skills:
+  - dropitem{item=see_decapitator_zombie_horse;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-zombie_nautilus:
+  Skills:
+  - dropitem{item=see_decapitator_zombie_nautilus;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-zombie_villager:
+  Skills:
+  - dropitem{item=see_decapitator_zombie_villager;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-zombie:
+  Skills:
+  - dropitem{item=zombie_head;ondrop=see_decapitator_effects} @triggerlocation
+
+see_decapitator_mob-zombified_piglin:
+  Skills:
+  - dropitem{item=see_decapitator_zombified_piglin;ondrop=see_decapitator_effects} @triggerlocation
+

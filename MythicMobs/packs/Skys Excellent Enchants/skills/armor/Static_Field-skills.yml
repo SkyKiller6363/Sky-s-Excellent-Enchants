@@ -1,0 +1,32 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see_static_field:
+  Cooldown: 6
+  TriggerConditions:
+  - (isPlayer || isLiving)
+  Conditions:
+  - chance{c=<math.enchant_level*0.06+0.12>}
+  Skills:
+  - fakelightning
+  - damage{a=<math.enchant_level>;ii=true;pi=true;damagecause=LIGHTNING}
+  - potion{type=SLOWNESS;l=0;duration=<math.enchant_level*20+30>;p=false;i=false}
+  - particle{p=electric_spark;a=18;hs=0.5;vs=0.6} @origin

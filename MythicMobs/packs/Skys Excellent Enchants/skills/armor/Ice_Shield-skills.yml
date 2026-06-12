@@ -1,0 +1,38 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see_ice_shield:
+  Cooldown: 3
+  Conditions:
+  - chance{c=<math.enchant_level*0.07+0.15>}
+  TriggerConditions:
+  - (isPlayer || isliving)
+  Skills:
+    - potion{type=slowness;l=<math.enchant_level-1>;duration=<math.enchant_level*20+20>}
+    - aura{duration=<math.enchant_level*20+20>;i=1;onTick=[  
+      - freeze{ticks=280} 
+      - damage{a=1;cd=2;damagecause=FREEZE} 
+      - sound{s=entity.player.hurt_freeze;cd=2} 
+      ]}
+    - am{m=<#35f8eb>Ice Shield} @self ?varisset{var=caster.enchant_action_message}
+    - sound{s=entity.experience_orb.pickup;v=0.6;p=1.4;audience=caster} @self ?varisset{var=caster.enchant_action_message}
+
+

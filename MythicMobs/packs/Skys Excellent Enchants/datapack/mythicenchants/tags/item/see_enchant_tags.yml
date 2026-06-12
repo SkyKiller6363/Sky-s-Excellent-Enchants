@@ -1,0 +1,5 @@
+universal:
+  - "#minecraft:enchantable/weapon"
+  - "#minecraft:enchantable/mining"
+  - "#minecraft:enchantable/equippable"
+  - "#minecraft:enchantable/trident"

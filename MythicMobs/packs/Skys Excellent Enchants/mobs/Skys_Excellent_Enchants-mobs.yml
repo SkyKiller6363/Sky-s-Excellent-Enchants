@@ -1,0 +1,111 @@
+# ___________________________________________________________________________
+# 
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+
+see_BomberTNT:
+  Type: tnt
+  Options:
+    ExplosionYield: 4
+    FuseTicks: 80
+
+
+
+
+Flame_Walker_Shulker:
+  Type: SHULKER
+  Options:
+    Invisible: true
+    NoAI: true
+    Invincible: true
+    # VisibleByDefault: false
+    Color: ORANGE
+  Skills:
+  - remove{delay=2} @self ~onSpawn
+  - remove @self ~onSpawn ?!inblock{types=LAVA}
+
+  - particle{particle=lava;a=1;y=1} @self ~onSpawn 0.15
+  - particle{particle=soul_fire_flame;a=2;hs=0.5;y=0.9} @self ~onSpawn 0.2 
+  - particle{particle=small_flame;a=2;hs=0.5;y=0.9} @self ~onSpawn
+
+
+wisdom_xp:
+  Type: experience_orb
+  Options:
+    Experience: 2
+
+
+lucky_miner_xp:
+  Type: experience_orb
+  Options:
+    Experience: 2
+
+curse_of_drowned:
+  Type: DROWNED
+  Equipment:
+  - GOLDEN_HELMET HEAD
+  AIGoalSelectors:
+  - clear
+  - swim
+  - meleeattack
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - ignite{t=1;delay=10} @self ~onSpawn
+
+
+Water_Walker_Shulker:
+  Type: SHULKER
+  Options:
+    Invisible: true
+    NoAI: true
+    Invincible: true
+    # VisibleByDefault: false
+    Color: BLUE
+  Skills:
+  - remove{delay=2} @self ~onSpawn
+  - remove @self ~onSpawn ?!inblock{types=WATER,KELP,KELP_PLANT,BUBBLE_COLUMN}
+  - particle{particle=Ominous_Spawning;a=2;hs=0.3;y=1} @self ~onSpawn 0.15
+  - particle{particle=splash;a=2;hs=0.5;y=0.9} @self ~onSpawn 0.2
+  - particle{particle=Dripping_Water;a=2;hs=0.5;y=0.9} @self ~onSpawn
+
+see_fishing_xp:
+  Type: experience_orb
+  Options:
+    Experience: 2
+
+
+see_deep_lure_guardian:
+  Type: GUARDIAN
+  Options:
+    PreventOtherDrops: true
+  AIGoalSelectors:
+  - clear
+  - swim
+  - meleeattack
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - remove{delay=400} @self ~onSpawn
+  - particle{p=splash;a=25;hs=0.5;vs=0.5} @self ~onSpawn

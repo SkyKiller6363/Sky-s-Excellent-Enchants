@@ -1,0 +1,32 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see_cyclone:
+  Cooldown: 6
+  TriggerConditions:
+  - (isPlayer || isLiving)
+  Conditions:
+  - chance{c=<math.enchant_level*0.05+0.08>}
+  Skills:
+  - effect:particletornado{p=cloud;cp=splash;mr=1;h=3;i=2;d=35;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=1}
+  - throw{velocity=<math.enchant_level*2+5>;velocityY=<math.enchant_level+1>} @EntitiesNearOrigin{r=<math.enchant_level+2>;ignore=players,samefaction}
+  - damage{a=<math.enchant_level+1>;pi=true;ii=true;damagecause=ENTITY_ATTACK} @EntitiesNearOrigin{r=<math.enchant_level+2>;ignore=players,samefaction}
+  - sound{s=item.trident.thunder;p=1.5;v=0.7} @self

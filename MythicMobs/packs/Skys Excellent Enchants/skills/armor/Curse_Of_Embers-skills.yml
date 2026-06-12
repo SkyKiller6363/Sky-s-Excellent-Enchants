@@ -1,0 +1,30 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see_curse_of_embers:
+  Cooldown: 4
+  Conditions:
+  - chance{c=<math.enchant_level*0.06+0.10>}
+  Skills:
+  - ignite{d=<math.enchant_level*30+40>}
+  - ignite{d=<math.enchant_level*20+30>} @@EntitiesInRadius{r=<math.enchant_level+2>;ignore=players,samefaction}
+  - particle{p=flame;a=35;hs=0.5;vs=0.7} 
+  - sound{s=entity.blaze.shoot;p=1.4;v=0.6}

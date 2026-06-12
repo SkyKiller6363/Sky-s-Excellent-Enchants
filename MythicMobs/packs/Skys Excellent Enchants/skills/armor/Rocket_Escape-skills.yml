@@ -1,0 +1,42 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see_rocket_escape:
+  Cooldown: 30
+  Conditions:
+  - healthpercent{p=<25%}
+  - chance{c=<math.(enchant_level*0.12)+0.18>}
+  Skills:
+  - sudoskill{s=see_rocket_escape_aura}
+
+see_rocket_escape_aura:
+  Skills:
+  - aura{aura=see_rocket_escape;duration=100;
+    onStart=[
+      - jump{v=<math.enchant_level*0.4+0.3>;delay=1}
+      - propel{v=<math.enchant_level*0.4+0.3>;delay=10} @forward
+      ];
+    onTick=[
+      - particle{p=fireworks_spark;a=4;vs=1;hs=0}
+      ];
+    components=[
+      - onDamaged{cancelevent=true;damagecause=FALL;onDamaged=[ removeaura{aura=see_rocket_escape}]}
+      ]}

@@ -14,21 +14,21 @@ Included enchantment categories:
 |---|---:|---|
 | Armor | 30 | [`enchantments/armor/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/armor) |
 | Bows | 15 | [`enchantments/bows/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/bows) |
-| Fishing Rods | 4 | [`enchantments/fishing_rods/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/fishing_rods) |
+| Fishing Rods | 16 | [`enchantments/fishing_rods/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/fishing_rods) |
 | Tools | 9 | [`enchantments/tools/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/tools) |
 | Tridents | 5 | [`enchantments/tridents/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/tridents) |
 | Universal | 3 | [`enchantments/universal/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/universal) |
 | Weapons | 29 | [`enchantments/weapons/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/weapons) |
-| **Total** | **95** |  |
+| **Total** | **107** |  |
 
-Full List: [Sky's Excellent Enchantments List](MythicMobs/packs/Skys%20Excellent%20Enchants/README.md)
+Full List: [Sky's Excellent Enchantments List](MythicMobs/packs/Skys%20Excellent%20Enchants/Enchantment_List.md)
 
 ## Requirements
 
 Recommended server/plugin setup:
 
 - Paper or compatible fork for Minecraft `1.21.11+`
-- MythicMobs Free `5.12.1+`
+- MythicMobs Free `5.12.2+`
 - Mythic Enchants `5.12.0+`
 - MythicCrucible `5.12.1+`
 
@@ -68,7 +68,7 @@ Sky's Excellent Enchantments/
 │   ├── universal/
 │   ├── utilities/
 │   └── weapons/
-├── Enchant_List.md
+├── Enchantment_List.md
 ├── packinfo.yml
 └── README.md
 ```
@@ -78,7 +78,7 @@ Sky's Excellent Enchantments/
 | File | Purpose |
 |---|---|
 | `packinfo.yml` | MythicMobs pack metadata, including name, description, author, version, and icon. |
-| `Enchant_List.md` | Human-readable enchantment table grouped by type. Includes descriptions, max levels, equipment tags, incompatibilities, and weights. |
+| `Enchantment_List.md` | Human-readable enchantment table grouped by type. Includes descriptions, max levels, equipment tags, incompatibilities, and weights. |
 | `datapack/mythicenchants/tags/item/see_enchant_tags.yml` | Custom item tag support used by Mythic Enchants. |
 | `enchantments/` | Mythic Enchants configuration files. |
 | `skills/` | MythicMobs skill files used by the enchantments. |

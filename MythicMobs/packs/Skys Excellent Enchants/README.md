@@ -2,7 +2,7 @@
 
 A table of all enchantments included in the pack, organized by enchantment type.
 
-**Total Enchantments:** 95
+**Total Enchantments:** 107
 
 **Column notes:**
 
@@ -135,14 +135,26 @@ A table of all enchantments included in the pack, organized by enchantment type.
 
 ---
 
-## Fishing Rod Enchantments (4)
+## Fishing Rod Enchantments (16)
 
 | Enchantment | Description | Max Level | Primary Items | Secondary Items | Incompatible With | Weight |
 |---|---|---:|---|---|---|---:|
+| Anchor Hook | Hooked enemies receive Slowness | 3 | Fishing Rods | Fishing Rods | — | 4 |
+| Barbed Hook | Chance to make hooked enemies bleed | 3 | Fishing Rods | Fishing Rods | — | 4 |
 | Curse Of Drowned | Has a chance to fish up a Drowned | 3 | Fishing Rods | Fishing Rods | — | 4 |
 | Deep Lure | Failed casts can stir the deep, pulling in bonus fish or trouble | 3 | Fishing Rods | Fishing Rods | — | 4 |
+| Flame Hook | Hooked enemies are ignited | 2 | Fishing Rods | Fishing Rods | — | 4 |
+| Frost Hook | Chance to Freeze and Slow hooked enemies | 3 | Fishing Rods | Fishing Rods | — | 4 |
+| Grappling Hook | Pulls you towards the hooked enemy when you pull | 1 | Fishing Rods | Fishing Rods | — | 4 |
+| Heavy Hook | Chance to apply Slowness and Mining Fatigue to the hooked enemy | 3 | Fishing Rods | Fishing Rods | — | 4 |
 | Salvage Hook | Failed fishing attempts can salvage useful junk and XP | 3 | Fishing Rods | Fishing Rods | — | 5 |
+| Sharpness Hook | Living entities take damage when hooked | 5 | Fishing Rods | Fishing Rods | — | 4 |
+| Siphon Hook | Chance to heal partial damage dealt to hooked enemy | 3 | Fishing Rods | Fishing Rods | — | 4 |
+| Thunder Hook | Chance to electrocute the hooked enemy with Lightning | 3 | Fishing Rods | Fishing Rods | — | 4 |
 | Treasure Current | The current can wash rare ocean loot to your failed casts | 3 | Fishing Rods | Fishing Rods | — | 2 |
+| Venom Hook | Chance to Poison hooked enemies | 3 | Fishing Rods | Fishing Rods | — | 4 |
+| Weakness Hook | Chance to apply Weakness to hooked enemies | 3 | Fishing Rods | Fishing Rods | — | 4 |
+| Wither Hook | Chance to Wither hooked enemies | 2 | Fishing Rods | Fishing Rods | — | 4 |
 
 ---
 

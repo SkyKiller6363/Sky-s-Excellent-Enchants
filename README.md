@@ -21,7 +21,7 @@ Included enchantment categories:
 | Weapons | 29 | [`enchantments/weapons/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/weapons) |
 | **Total** | **107** |  |
 
-Full List: [Sky's Excellent Enchantments List](MythicMobs/packs/Skys%20Excellent%20Enchants/Enchantment_List.md)
+Full List: [Sky's Excellent Enchantments List](MythicMobs/packs/Skys%20Excellent%20Enchants/README.md)
 
 ## Requirements
 

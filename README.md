@@ -28,7 +28,7 @@ Full List: [Sky's Excellent Enchantments List](MythicMobs/packs/Skys%20Excellent
 Recommended server/plugin setup:
 
 - Paper or compatible fork for Minecraft `1.21.11+`
-- MythicMobs Free `5.12.2+`
+- MythicMobs Premium `5.12.2+`
 - Mythic Enchants `5.12.0+`
 - MythicCrucible `5.12.1+`
 

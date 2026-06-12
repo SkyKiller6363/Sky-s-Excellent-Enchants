@@ -1,7 +1,5 @@
 # Sky's Excellent Enchants - Sanity Check TODO
 
-Use this as the working checklist for the AI-created enchantments that need extra validation before release.
-
 ## High Priority: Update / Verify Mechanics
 
 ### 1. Riptide Reach

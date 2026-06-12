@@ -1,0 +1,54 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see:water_breathing:
+  Display: Water Breathing
+  Description: Provides the wearer with Water Breathing
+  Rarity: UNCOMMON
+  MinLevel: 1
+  MaxLevel: 1
+  ValidSlots:
+  - HEAD
+  SupportedItems: '#minecraft:enchantable/head_armor'
+  AnvilCost: 5
+  Options:
+    Enabled: true
+    Treasure: false
+    RandomLoot: true
+    Tradeable: true
+    TradedEquipment: true
+    MobSpawnEquipment: true
+  Enchanting:
+    Weight: 5
+    MinCost:
+      Base: 20
+      PerLevel: 0
+    Promised: true
+    BookOffer: true
+  Skills: # if d=600 is not working on your version, change it to like 600 instead 
+    - potion{type=WATER_BREATHING;l=0;d=600;p=false;i=false} @self ~onTimer:20 ?inblock{types=WATER}
+    - potion{type=WATER_BREATHING;l=0;d=600;p=false;i=false} @self ~onEquip ?inblock{types=WATER}
+    - potionclear{type=WATER_BREATHING} @self ~onUnequip
+
+
+#
+# ── BOW ENCHANTMENTS ────────────────────────────────────────────────────────
+#

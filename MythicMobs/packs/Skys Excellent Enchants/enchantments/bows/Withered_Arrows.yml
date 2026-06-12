@@ -1,0 +1,63 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see:withered_arrows:
+  Display: Withered Arrows
+  Description: Applies Wither on arrow hit
+  Rarity: RARE
+  MinLevel: 1
+  MaxLevel: 3
+  ValidSlots:
+  - HAND
+  SupportedItems: '#minecraft:enchantable/bow'
+  ConflictingEnchants:
+  - see:bomber
+  - see:dragonfire_arrows
+  - see:ender_bow
+  - see:ghast
+  - see:poisoned_arrows
+  AnvilCost: 5
+  Options:
+    Enabled: true
+    Treasure: false
+    RandomLoot: true
+    Tradeable: true
+    TradedEquipment: true
+    MobSpawnEquipment: true
+  Enchanting:
+    Weight: 3
+    MinCost:
+      Base: 22
+      PerLevel: 5
+    Promised: true
+    BookOffer: true
+    PrimaryItems:
+    - '#minecraft:enchantable/bow'
+  Skills:
+  - particle{p=Spell_Mob_Ambient;hs=0.1;vs=0.1;a=2;color=#736156;power=1;repeat=600;repeatI=1}
+    @shotprojectile ~onShoot ?batchedchance{chance=<math.enchant_level*0.04+0.04>;consume=2}
+  - skill{s=see_withered_arrows} @trigger ~onBowHit ?batchedchance{chance=<math.enchant_level*0.04+0.04>;consume=2}
+  - particle{particle=reddust;amount=1;y=-1;audience=caster} @self ~onBowMiss ?batchedchance{chance=<math.enchant_level*0.04+0.04>;consume=2}
+
+
+#
+# ── WEAPON ENCHANTMENTS ────────────────────────────────────────────────────────
+#

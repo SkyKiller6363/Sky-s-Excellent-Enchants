@@ -14,12 +14,12 @@ Included enchantment categories:
 |---|---:|---|
 | Armor | 30 | [`enchantments/armor/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/armor) |
 | Bows | 15 | [`enchantments/bows/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/bows) |
-| Fishing Rods | 16 | [`enchantments/fishing_rods/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/fishing_rods) |
+| Fishing Rods | 15 | [`enchantments/fishing_rods/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/fishing_rods) |
 | Tools | 9 | [`enchantments/tools/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/tools) |
 | Tridents | 5 | [`enchantments/tridents/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/tridents) |
 | Universal | 3 | [`enchantments/universal/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/universal) |
 | Weapons | 29 | [`enchantments/weapons/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/weapons) |
-| **Total** | **107** |  |
+| **Total** | **106** |  |
 
 Full List: [Sky's Excellent Enchantments List](MythicMobs/packs/Skys%20Excellent%20Enchants/README.md)
 
@@ -79,7 +79,8 @@ Sky's Excellent Enchantments/
 |---|---|
 | `packinfo.yml` | MythicMobs pack metadata, including name, description, author, version, and icon. |
 | `Enchantment_List.md` | Human-readable enchantment table grouped by type. Includes descriptions, max levels, equipment tags, incompatibilities, and weights. |
-| `datapack/mythicenchants/tags/item/see_enchant_tags.yml` | Custom item tag support used by Mythic Enchants. |
+| `datapack/mythicenchants/tags/item/see_universal_tag.yml` | Custom item tag support used by Sky's Excellent Enchants. |
+| `datapack/mythicenchants/tags/item/see_bows_and_crossbows.yml` | Custom item tag support used by Sky's Excellent Enchants. |
 | `enchantments/` | Mythic Enchants configuration files. |
 | `skills/` | MythicMobs skill files used by the enchantments. |
 | `items/` | Custom item definitions used by certain enchantments. |

@@ -1,0 +1,36 @@
+# ___________________________________________________________________________
+#
+#   ████████████████████████████████████████████████████████████████████████
+#   ██                                                                    ██
+#   ██                   Sky's Excellent Enchantments                     ██
+#   ██                      Created by SkyKiller63                        ██
+#   ██                                                                    ██
+#   ██   ┌────────────────────────────────────────────────────────┐       ██
+#   ██   │ Server Version: Paper 1.21.11+                         │       ██
+#   ██   │ MythicMobs Free: 5.12.2 (Hard Dependency)              │       ██
+#   ██   │ MythicEnchants: 5.12.0 (Hard Dependency)               │       ██
+#   ██   └────────────────────────────────────────────────────────┘       ██
+#   ██                                                                    ██
+#   ██   Description: A group of enchantments that are                    ██
+#   ██   fun for all. I hope you enjoy!                                   ██
+#   ██   For problems, go to my discord. discord.SkyKillerGames.com       ██
+#   ██                                                                    ██
+#   ████████████████████████████████████████████████████████████████████████
+# ___________________________________________________________________________
+#
+
+see_barbed_hook:
+  Cooldown: 8
+  TriggerConditions:
+    - (isPlayer || isLiving)
+  Conditions:
+    - chance{c=<math.enchant_level*0.06+0.08>}
+  Skills:
+    - aura{aura=barbed_bleeding;i=30;duration=<math.enchant_level*40+40>;
+      onTick=[
+        - particle{particle=block_crack;material=REDSTONE_BLOCK;amount=10;hs=0.5;vs=0.5;y=1;repeat=2;repeatI=10}
+        - damage{a=<math.enchant_level*2>}
+        ]} 
+
+    - am{m=<#983220><i>Enemy Bleeding} @self ?varisset{var=caster.enchant_action_message}
+    - sound{s=entity.experience_orb.pickup;v=0.6;p=1.4;audience=caster} @self ?varisset{var=caster.enchant_action_message}

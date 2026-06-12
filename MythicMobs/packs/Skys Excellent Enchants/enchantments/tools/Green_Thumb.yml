@@ -27,7 +27,7 @@ see:green_thumb: #Needs testing
   MaxLevel: 3
   ValidSlots:
   - HAND
-  SupportedItems: '#minecraft:enchantable/mining'
+  SupportedItems: '#minecraft:hoes'
   AnvilCost: 3
   Options:
     Enabled: true

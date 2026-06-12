@@ -27,7 +27,7 @@ see:duelist:
   MaxLevel: 3
   ValidSlots:
   - HAND
-  SupportedItems: '#minecraft:enchantable/sword'
+  SupportedItems: '#minecraft:enchantable/sharp_weapon'
   AnvilCost: 5
   Options:
     Enabled: true
@@ -44,7 +44,7 @@ see:duelist:
     Promised: true
     BookOffer: true
     PrimaryItems:
-    - '#minecraft:enchantable/sword'
+    - '#minecraft:enchantable/sweeping'
   Attributes:
     MainHand:
     - ATTACK_SPEED <math.enchant_level*0.12> ADD

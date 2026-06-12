@@ -27,7 +27,7 @@ see:veinminer: # Might be premium. still unsure
   MaxLevel: 3
   ValidSlots:
   - HAND
-  SupportedItems: '#minecraft:enchantable/mining'
+  SupportedItems: '#minecraft:pickaxes'
   AnvilCost: 5
   Options:
     Enabled: true

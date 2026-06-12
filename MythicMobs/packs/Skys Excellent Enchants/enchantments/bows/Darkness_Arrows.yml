@@ -27,7 +27,7 @@ see:darkness_arrows: # Requires to be NOT day to get in enchanting table
   MaxLevel: 3
   ValidSlots:
   - HAND
-  SupportedItems: '#minecraft:enchantable/bow'
+  SupportedItems: '#mythicenchants:bows_and_crossbows'
   ConflictingEnchants:
   - see:bomber
   - see:dragonfire_arrows

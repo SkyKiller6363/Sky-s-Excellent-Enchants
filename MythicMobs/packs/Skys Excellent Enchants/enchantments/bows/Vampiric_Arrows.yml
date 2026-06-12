@@ -27,7 +27,7 @@ see:vampiric_arrows:
   MaxLevel: 3
   ValidSlots:
   - HAND
-  SupportedItems: '#minecraft:enchantable/bow'
+  SupportedItems: '#mythicenchants:bows_and_crossbows'
   ConflictingEnchants:
   - see:bomber
   - see:dragonfire_arrows

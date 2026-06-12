@@ -27,7 +27,7 @@ see:cure:
   MaxLevel: 3
   ValidSlots:
   - HAND
-  SupportedItems: '#minecraft:enchantable/weapon'
+  SupportedItems: '#minecraft:enchantable/sharp_weapon'
   AnvilCost: 5
   Options:
     Enabled: true

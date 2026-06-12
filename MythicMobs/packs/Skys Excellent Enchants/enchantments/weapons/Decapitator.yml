@@ -27,7 +27,7 @@ see:decapitator:
   MaxLevel: 5
   ValidSlots:
   - HAND
-  SupportedItems: '#minecraft:enchantable/weapon'
+  SupportedItems: '#minecraft:enchantable/sharp_weapon'
   AnvilCost: 10
   Options:
     Enabled: true

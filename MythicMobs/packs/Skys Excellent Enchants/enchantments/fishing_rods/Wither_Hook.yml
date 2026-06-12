@@ -28,6 +28,8 @@ see:wither_hook:
   ValidSlots:
   - HAND
   SupportedItems: minecraft:fishing_rod
+  ConflictingEnchants:
+  - see:venom_hook
   AnvilCost: 5
   Options:
     Enabled: true

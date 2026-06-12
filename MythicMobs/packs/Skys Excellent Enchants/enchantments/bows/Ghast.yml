@@ -60,8 +60,5 @@ see:ghast:
       PerLevel: 8
     Promised: true
     BookOffer: true
-    PrimaryItems:
-    - '#minecraft:enchantable/bow'
-    - '#minecraft:enchantable/crossbow'
   Skills:
   - skill{s=see_ghast;sync=true} @self ~onShoot

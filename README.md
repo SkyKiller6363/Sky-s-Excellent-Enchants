@@ -12,14 +12,14 @@ Included enchantment categories:
 
 | Category | Count | Folder |
 |---|---:|---|
-| Armor | 32 | [`enchantments/armor/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/armor) |
+| Armor | 30 | [`enchantments/armor/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/armor) |
 | Bows | 15 | [`enchantments/bows/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/bows) |
-| Fishing Rods | 5 | [`enchantments/fishing_rods/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/fishing_rods) |
-| Tools | 10 | [`enchantments/tools/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/tools) |
+| Fishing Rods | 4 | [`enchantments/fishing_rods/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/fishing_rods) |
+| Tools | 9 | [`enchantments/tools/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/tools) |
 | Tridents | 5 | [`enchantments/tridents/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/tridents) |
 | Universal | 3 | [`enchantments/universal/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/universal) |
-| Weapons | 30 | [`enchantments/weapons/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/weapons) |
-| **Total** | **100** |  |
+| Weapons | 29 | [`enchantments/weapons/`](MythicMobs/packs/Skys%20Excellent%20Enchants/enchantments/weapons) |
+| **Total** | **95** |  |
 
 Full List: [Sky's Excellent Enchantments List](MythicMobs/packs/Skys%20Excellent%20Enchants/Enchantment_List.md)
 
